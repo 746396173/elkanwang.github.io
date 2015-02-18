@@ -1,3 +1,28 @@
+@-webkit-keyframes rotateNav {
+  0% {
+    transform: none; }
+  25% {
+    transform: rotate3d(1, 0, -1, 15deg); }
+  75% {
+    transform: rotate3d(1, 0, -1, -15deg); }
+  100% {
+    transform: none; } }
+@keyframes rotateNav {
+  0% {
+    transform: none; }
+  25% {
+    transform: rotate3d(1, 0, -1, 15deg); }
+  75% {
+    transform: rotate3d(1, 0, -1, -15deg); }
+  100% {
+    transform: none; } }
+@-webkit-keyframes rotateIcon {
+  0% {
+    transform: none; }
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg); } }
 body {
   font-family: "Metrophobic", Helvetica, sans-serif; }
 
@@ -71,8 +96,15 @@ a.foo {
   transition: all .5s ease; }
   #contact li img {
     padding: 10px; }
+    #contact li img:hover {
+      -webkit-animation: rotateIcon 5s linear infinite; }
   #contact li:hover {
     background-color: #1f4b47; }
+
+#profile img {
+  float: right;
+  width: 400px;
+  margin: 20px; }
 
 .alert, .success, .warning, .error {
   padding: 15px;
