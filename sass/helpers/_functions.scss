@@ -1,3 +1,23 @@
 @function opacity($color, $opacity) {
 	@return rgba($color, $opacity);
 }
+
+@-webkit-keyframes rotateNav {
+	0% {transform: none;}
+	25% {transform: rotate3d(1,0,-1,15deg);}
+	75% {transform: rotate3d(1,0,-1,-15deg);}
+	100% {transform: none;}
+}
+
+@keyframes rotateNav {
+	0% {transform: none;}
+	25% {transform: rotate3d(1,0,-1,15deg);}
+	75% {transform: rotate3d(1,0,-1,-15deg);}
+	100% {transform: none;}
+}
+
+@-webkit-keyframes rotateIcon {
+	0% {transform: none;}
+	50% {transform: rotate(180deg);}
+	100% {transform: rotate(360deg);}
+}

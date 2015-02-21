@@ -23,9 +23,6 @@ a.foo {
 	height: 100px;
 	padding: 5px 10px;
 	background: #9c3;
-	-webkit-transition: background .3s ease, color 0.2s linear;
-	-moz-transition: background .3s ease, color 0.2s linear;
-	-o-transition: background .3s ease, color 0.2s linear;
 	transition: background .3s ease, color 0.2s linear;
 
 	&:hover,

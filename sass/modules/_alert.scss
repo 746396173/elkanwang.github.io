@@ -12,10 +12,11 @@
 	p {
 		margin:0;
 	}
-}
+}px
 
 .alert {
 	@extend %alert;
+	border-color: white;
 }
 
 .success {
@@ -34,4 +35,9 @@
 	@extend %alert;
 	border-color: $error-color;
 	background-color: opacity($error-color, .8);
+}
+
+
+.aaa {
+	border-left: 10px;
 }

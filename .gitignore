@@ -1,2 +1,10 @@
-*.scssc
-*.map
+**/*.scssc
+**/*.map
+
+svg
+img
+
+# grunt related files
+Gruntfile.js
+node_modules/
+package.json
