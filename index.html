@@ -39,7 +39,7 @@ title: Elkan Wang
   <h2 class="title">Blog Posts</h1>
   <ul class="posts">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; {{ post.title }} <a href="{{ post.url }}">Read More</a></li>
+      <li><span>{{ site.time | date_to_long_string }}</span> &raquo; {{ post.title }} <a href="{{ post.url }}">Read More</a></li>
     {% endfor %}
   </ul>
 </div>
