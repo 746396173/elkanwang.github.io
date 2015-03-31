@@ -1,6 +1,9 @@
 .highlight  {
 	background-color:lighten($background-color,25);
+	border-radius: 5px;
+	box-shadow: inset 0 1px 10px rgba(0,0,0,0.3),0 1px 0 rgba(255,255,255,0.1),0 -1px 0 rgba(0,0,0,0.5);
 	color: #000000;
+	font-family: "Metrophobic", Helvetica, sans-serif;
 	padding: 10px;
 }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
