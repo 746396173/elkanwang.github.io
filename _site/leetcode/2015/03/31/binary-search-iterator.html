@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Leetcode solution: Binary search iterator</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+        <!-- Font -->
+        <link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
+
+        <!-- jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+
+        <div>
+
+          <div id="post" class="block">
+
+	<h2 class="title">Leetcode solution: Binary search iterator</h2>
+	<p class="meta">31 March 2015</p>
+
+	<div class="post">
+	<h1>Binary Search Iterator</h1>
+
+<h3>Initialization</h3>
+
+<p>Initializing a binary search iterator, to create a stack to store all the most left nodes.</p>
+
+<h3>hasNext</h3>
+
+<p>When asking if there is a next smallest number, we can just ask for if the stack that we built is empty.<br>
+If it&#39;s empty, then there is no more numbers.<br>
+If it isn&#39;t, then we can find the next smallest number</p>
+
+<h3>next</h3>
+
+<p>When asking for the next smallest number, the next smallest number is the last thing inserted into the stack. So pop the stack, <code>node = self.stack.pop()</code> , to get the next smallest number.<br>
+But also, we take a subtree rooted at the right child of the node. And keep all the left most nodes of the subtree into our stack. This way, we are able to scanning the binary tree and always output the next smallest number.</p>
+
+<hr>
+
+<p>The code:  </p>
+
+<div class="highlight"><pre><code class="python"><span class="lineno"> 1</span> <span class="c"># Definition for a  binary tree node</span>
+<span class="lineno"> 2</span> <span class="c"># class TreeNode:</span>
+<span class="lineno"> 3</span> <span class="c">#     def __init__(self, x):</span>
+<span class="lineno"> 4</span> <span class="c">#         self.val = x</span>
+<span class="lineno"> 5</span> <span class="c">#         self.left = None</span>
+<span class="lineno"> 6</span> <span class="c">#         self.right = None</span>
+<span class="lineno"> 7</span> 
+<span class="lineno"> 8</span> <span class="k">class</span> <span class="nc">BSTIterator</span><span class="p">:</span>
+<span class="lineno"> 9</span>     <span class="c"># @param root, a binary search tree&#39;s root node</span>
+<span class="lineno">10</span>     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">):</span>
+<span class="lineno">11</span>         <span class="bp">self</span><span class="o">.</span><span class="n">stack</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="lineno">12</span>         <span class="k">while</span> <span class="n">root</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+<span class="lineno">13</span>             <span class="bp">self</span><span class="o">.</span><span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+<span class="lineno">14</span>             <span class="n">root</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">left</span>
+<span class="lineno">15</span> 
+<span class="lineno">16</span> 
+<span class="lineno">17</span>     <span class="c"># @return a boolean, whether we have a next smallest number</span>
+<span class="lineno">18</span>     <span class="k">def</span> <span class="nf">hasNext</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="lineno">19</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">stack</span>
+<span class="lineno">20</span> 
+<span class="lineno">21</span> 
+<span class="lineno">22</span>     <span class="c"># @return an integer, the next smallest number</span>
+<span class="lineno">23</span>     <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="lineno">24</span>         <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="lineno">25</span>         <span class="n">x</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">right</span>
+<span class="lineno">26</span>         <span class="k">while</span> <span class="n">x</span><span class="p">:</span>
+<span class="lineno">27</span>             <span class="bp">self</span><span class="o">.</span><span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="lineno">28</span>             <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">left</span>
+<span class="lineno">29</span>         <span class="k">return</span> <span class="n">node</span><span class="o">.</span><span class="n">val</span>
+</code></pre></div>
+
+	</div>
+
+</div>
+
+        </div>
+
+        <footer>&copy Elkan Wang, 2015</footer>
+
+    </body>
+</html>
