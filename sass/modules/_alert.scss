@@ -37,7 +37,7 @@
 	background-color: opacity($error-color, .8);
 }
 
-
-.aaa {
-	border-left: 10px;
+a.alert {
+	color: $error-color;
+	text-decoration: underline;
 }

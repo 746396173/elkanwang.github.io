@@ -108,6 +108,15 @@ a.foo {
       -webkit-animation: rotateIcon 5s linear infinite;
               animation: rotateIcon 5s linear infinite; }
 
+.subject {
+  background-color: #1b403d;
+  margin: 10px 0px;
+  padding: 5px; }
+  .subject .title {
+    font-weight: bold; }
+  .subject .course {
+    padding-left: 10px; }
+
 #profile img {
   float: right;
   width: 400px;
@@ -144,8 +153,9 @@ px
   border-color: #f0563d;
   background-color: rgba(240, 86, 61, 0.8); }
 
-.aaa {
-  border-left: 10px; }
+a.alert {
+  color: #f0563d;
+  text-decoration: underline; }
 
 .seperator {
   clear: both;
