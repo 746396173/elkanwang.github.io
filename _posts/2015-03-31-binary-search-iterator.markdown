@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Leetcode solution: Binary search iterator"
+title:  "Leetcode Solution: Binary Search Iterator"
 date:   2015-03-31
 categories: leetcode
+excerpt: ""
 ---
 
 # Binary Search Iterator

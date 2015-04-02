@@ -3,7 +3,7 @@ layout: post
 title:  "Some Learning Points for AngularJS"
 date:   2015-04-01  
 categories: angularjs
-Excerpt: AngularJS is one of the most popular front-end javascript framework at this time. It is great to be used to develop a single page web application. It extends HTML attributes with **Directives**, and binds data to HTML with **Expressions**. It's well-known for its **"Data Binding"**.  
+excerpt: AngularJS is one of the most popular front-end javascript framework at this time. It is great to be used to develop a single page web application.
 ---
 
 #Some Learning Points for AngularJS
