@@ -2,7 +2,7 @@
 	font-size: 150%;
 	float: right;
 	padding: 42px 0 0 30px;
-	margin-right: 80px;
+	margin: 0px 80px;
 
 	li {
 		float: left;
@@ -25,6 +25,8 @@
 }
 
 
+// logos
+
 #contact {
 
 	li {
@@ -34,7 +36,7 @@
 		transition:all .5s ease;
 
 		img{
-			padding: 10px;
+			margin: 0 20px;
 			&:hover {
 				animation: rotateIcon 5s linear infinite;
 			}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Some Learning Points for AngularJS</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+        <!-- AngularJS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+        <!-- Angular UI Router -->
+        <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+
+        <script src="app.js"></script>
+
+    </head>
+    <body ng-controller="MainCtrl">
+
+        <div>
+
+          <div id="post" class="block">
+
+	<h2 class="title">Some Learning Points for AngularJS</h2>
+	<p class="meta">31 March 2015</p>
+
+	<div class="post">
+	<h1>Simple Markdown Notes</h1>
+
+<h3>Headers</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text"># H1
+## H2
+### H3
+</code></pre></div>
+<h3>Font Styles</h3>
+
+<p><em>This is italic</em><br>
+<strong>This is bold</strong><br>
+~~This is strikethrough~~</p>
+
+<h3>Blockquotes</h3>
+
+<blockquote>
+<p>Blockquotes can be very useful in making documents clearer</p>
+</blockquote>
+
+<h3>Tables</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Column1 | Column2 | Column3
+----- | ---- | ----
+Content1 | Content2 | Content3
+</code></pre></div>
+<p>Column1 | Column2 | Column3
+----- | ---- | ----
+Content1 | Content2 | Content3</p>
+
+<h3>Lists</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">* This is an un-ordered list
+    * Different hierachies
+</code></pre></div>
+<ul>
+<li>This is an un-ordered list
+
+<ul>
+<li>Different hierachies</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text">- This is an un-ordered list too
+    - with hierachies
+</code></pre></div>
+<ul>
+<li>This is an un-ordered list too
+
+<ul>
+<li>with hierachies</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text">1. This is an ordered list
+2. And here
+    1. with hierachies
+</code></pre></div>
+<ol>
+<li>This is an ordered list</li>
+<li>And here
+
+<ol>
+<li>with hierachies</li>
+</ol></li>
+</ol>
+
+<h3>Task lists</h3>
+
+<ul>
+<li>[x] this is a complete item</li>
+<li>[ ] this is an incomplete item</li>
+</ul>
+
+<h3>Code and Syntax Highlighting</h3>
+
+<h4>Inline Code</h4>
+
+<p>You can embed <code>inline code</code> like this.</p>
+
+<h4>Block of code</h4>
+
+<p>And you can have block of code like this:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">This is a block of code
+</code></pre></div>
+<p>And...of course, code highlighting</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="s2">&quot;javascript&quot;</span><span class="p">;</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
+</code></pre></div>
+<h3>And ... emojis</h3>
+
+<p>:boom</p>
+
+	</div>
+
+</div>
+
+        </div>
+
+        <footer>&copy Elkan Wang, 2015</footer>
+
+    </body>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Font -->
+    <link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+</html>

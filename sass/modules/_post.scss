@@ -27,8 +27,9 @@
 }
 
 .post code {
-  background-color:lighten($background-color,25);
+  // background-color:lighten($background-color,25);
   padding: .2em;
+  color: black;
 }
 
 .post pre code {
@@ -40,6 +41,10 @@
   border: 1px solid #000;
   background-color: #333;
   color: #FFF;
+}
+
+.post blockquote {
+  border-left: 3px solid black;
 }
 
 .post pre.terminal code {
