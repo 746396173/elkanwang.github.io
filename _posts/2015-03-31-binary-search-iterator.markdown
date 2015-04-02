@@ -6,8 +6,6 @@ categories: leetcode
 excerpt: ""
 ---
 
-# Binary Search Iterator
-
 ### Initialization
 Initializing a binary search iterator, to create a stack to store all the most left nodes.
 

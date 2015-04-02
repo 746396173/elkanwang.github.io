@@ -6,9 +6,6 @@ categories: markdown
 excerpt: So I've finally decided to start blogging. By doing some research, Jekyll+Github provides a great platform for a simple blog. Jekyll generates website from markdown. So, here are some study notes for basic markdown syntax.
 ---
 
-Simple Markdown Notes
-======
-
 ###Headers
 ```
 # H1
