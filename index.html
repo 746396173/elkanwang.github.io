@@ -6,11 +6,11 @@ title: Elkan Wang
 
 <nav id="navbar" class="navbar" role="navigation">
     <ul>
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#work">Internships</a></li>
-        <li><a href="#courses">Courses</a></li>
+        <li><a ui-sref="profile">Profile</a></li>
+        <li><a ui-sref="blog">Blog</a></li>
+        <li><a ui-sref="projects">Projects</a></li>
+        <li><a ui-sref="work">Internships</a></li>
+        <li><a ui-sref="courses">Courses</a></li>
     </ul>
 </nav>
 
@@ -23,101 +23,4 @@ title: Elkan Wang
 
 <div class="seperator"></div>
 
-<div id="profile" class="block">
-    <h2 class="title">About me</h2>
-    <h1>Hello, I'm Elkan.</h1>
-    <p>I'm a 3rd year student at University of Waterloo. I major in Computer Science and also minor both in Mathematical Economics and Combinatorics & Optimization. </p>
-    <h2>Techniques:</h2>
-    <p>Language skills: C, C++, C#, Python, Scheme</p>
-    <p>Version control: git</p>
-    <p>Web development: PHP, JavaScript, jQuery</p>
-    <h2>My curiosity:</h2>
-    <p>Learning: Angular.js, Node.js, d3.js, SVG <br/> and....</p>
-
-</div>
-
-<div id="blog" class="block">
-  <h2 class="title">Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-        <li class="site">
-          <span> {{ post.date | date_to_long_string }}</span> <h3>&raquo; {{ post.title }}</h3> </br>
-          <h5> {{ post.excerpt }} </h5> </br>
-          <a class="alert" href="{{ post.url }}">Read More</a>
-        </li>
-    {% endfor %}
-  </ul>
-</div>
-
-
-<div id="projects" class="block">
-<h2 class="title">Projects</h2>
-    <div class="list-group">
-        <!-- <a href="trivia/trivia.html" class="list-group-item" target="_blank"><h4 class="list-group-item-heading">Trivia Game Generator (demo)</h4></a>
-        <a class="list-group-item disabled"><h4 class="list-group-item-heading">Google Maps Data Visualization (Under development)</h4></a></a> -->
-        <div>
-          <h3> <a href="http://elkanwang.github.io">Personal Website</a></h3>
-          <span><img src="img/css3.png" alt="css3" title="css3" class="button"> <img src="img/html5.png" alt="html5" title="html5" class="button"> <img src="img/jekyll.png" alt="jekyll" title="jekyll" class="button"></span>
-          <p>Using CSS3, HTML5 to build a simple personal website. The blog is powered by Jekyll. The website is hosted on Github.</p> 
-        </div>
-
-        <div class="project">
-          <h3><a href="https://github.com/elkanwang/d3Graphs">Data Visualization</a></h3>
-          <p>I have developed some data visualization samples using D3.js.</p>
-        </div>
-        <!-- <a class="list-group-item disabled"><h4 class="list-group-item-heading">Instagram Project (Under development)</h4></a></a> -->
-    </div>
-</div>
-
-
-<div id="work" class="block">
-    <h2 class="title">Internships</h2>
-    <div id="achievers">
-        <h3>Achivers Inc.</h3>
-        <p><em>Softweare Developer Co-op</em>, <small>May/2014 - Aug/2014, Toronto, Ontario</small></p>
-        <ul>
-            <li>Fixed bugs that impact the whole platform in a very timely manner</li>
-            <li>Developed a tool to automate user information update, saving man hours for hundreds of manual updates everyday</li>
-            <li>Created a bug report that is to be sent monthly and quarterly to support team and leadership team, providing insightful data analysis information</li>
-        </ul>
-    </div>
-    <div id="rbc">
-        <h3>Royal Bank of Canada</h3>
-        <p><em>Technology System Analyst</em>, <small>Sep/2013 - Dec/2013, Mississauga, Ontario</small></p>
-        <ul>
-            <li>Initiated and completed the development of a network-attached storage cleanup utility project in .NET platform using skills including but not limited to C# and LINQ to Xml </li>
-            <li>Planned, co-ordinated and carried out SharePoint 2010 migration for both maintenance and project team, involving over 100 team members</li>
-        </ul>
-    </div>
-</div>
-
-<div id="courses" class="block">
-  <h2 class="title">Courses</h2>
-  <div class="subject">
-    <div class="title">Mathematics</div>
-    <div class="course">Algebra for Honours Mathematics, Calculus 1 for Honours Mathematics, Calculus 2 for Honours Mathematics</div>
-  </div>
-  <div class="subject">
-    <div class="title">Accounting</div>
-    <div class="course">Introduction to Financial Accounting, Introduction to Managerial Accounting</div>
-  </div>
-  <div class="subject"> 
-    <div class="title">Statistics</div>
-    <div class="course">Probability, Statistics</div>
-  </div>
-  <div class="subject">
-    <div class="title">Economics</div>
-    <div class="course">Microeconomic Theory 1, Macroeconomic Theory 1, Introduction to International Economics, International Finance, Macroeconomic Theory 2</div>
-  </div>
-  <div class="subject">
-    <div class="title">Combinatorics and Optimization</div>
-    <div class="course">Introduction to Combinatorics, Introduction to Optimization, Introduction to Graph Theory, Deterministic OR Models</div>
-  </div>
-  <div class="subject">
-    <div class="title">Computer Science</div>
-    <div class="course">Introduction to Computer Science 1, Introduction to Computer Science 2, Elementary Algorithm Design and Data Abstraction, Data Structures and Data Management, Foundations of Sequential Programs, Logic and Computation, Object-Oriented Software Development, Computer Organization and Design</div>
-  </div>
-</div>
-
-
-
+<div ui-view></div>
