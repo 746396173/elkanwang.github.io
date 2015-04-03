@@ -109,7 +109,12 @@ a.foo {
 
 .subject {
   background-color: #1b403d;
-  margin: 20px 0px; }
+  margin: 10px 0px;
+  padding: 5px; }
+  .subject .title {
+    font-weight: bold; }
+  .subject .course {
+    padding-left: 10px; }
 
 #profile img {
   float: right;

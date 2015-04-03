@@ -4,6 +4,7 @@ title:  "Leetcode Solution: Binary Search Iterator"
 date:   2015-03-31
 categories: leetcode
 excerpt: ""
+comments: true
 ---
 
 ### Initialization
