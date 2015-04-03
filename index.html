@@ -1,26 +1,65 @@
----
-layout: default
-title: Elkan Wang
----
 
 
-<nav id="navbar" class="navbar" role="navigation">
-    <ul>
-        <li><a ui-sref="profile">Profile</a></li>
-        <li><a ui-sref="blog">Blog</a></li>
-        <li><a ui-sref="projects">Projects</a></li>
-        <li><a ui-sref="work">Internships</a></li>
-        <li><a ui-sref="courses">Courses</a></li>
-    </ul>
-</nav>
 
-<div id="contact">
-    <ul>
-        <li><a id="linkedin" href="https://ca.linkedin.com/pub/xiangkang-wang/63/783/374/" target="_blank"><img class="button" alt="linkedin" src="img/linkedin1.png"/></a></li>
-        <li><a id="github" href="https://github.com/elkanwang" target="_blank"><img class="button" alt="linkedin" src="img/github7.png"/></a></li>
-    </ul>
-</div>
 
-<div class="seperator"></div>
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Elkan Wang</title>
+        <meta name="viewport" content="width=device-width">
 
-<div ui-view></div>
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+        <!-- AngularJS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+        <!-- Angular UI Router -->
+        <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+
+        <script src="scripts/myApp.js"></script>
+        <script src="scripts/mainCtrl.js"></script>
+
+    </head>
+    <body ng-app="myApp" ng-controller="mainCtrl">
+
+        <div>
+
+          <nav id="navbar" class="navbar" role="navigation">
+              <ul>
+                  <li><a ui-sref="profile">Profile</a></li>
+                  <li><a ui-sref="blog">Blog</a></li>
+                  <li><a ui-sref="projects">Projects</a></li>
+                  <li><a ui-sref="work">Internships</a></li>
+                  <li><a ui-sref="courses">Courses</a></li>
+              </ul>
+          </nav>
+
+          <div id="contact">
+              <ul>
+                  <li><a id="linkedin" href="https://ca.linkedin.com/pub/xiangkang-wang/63/783/374/" target="_blank"><img class="button" alt="linkedin" src="img/linkedin1.png"/></a></li>
+                  <li><a id="github" href="https://github.com/elkanwang" target="_blank"><img class="button" alt="linkedin" src="img/github7.png"/></a></li>
+              </ul>
+          </div>
+
+          <div class="seperator"></div>
+
+          <div ui-view></div>
+
+        </div>
+
+        <footer>&copy Elkan Wang, 2015</footer>
+
+    </body>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Font -->
+    <link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+</html>
