@@ -58,7 +58,7 @@
 
 <h2>AngularJS Expressions</h2>
 
-<p>The AngularJS Expressions are written in double brackets: <code>{5+5}</code>, <code></code></p>
+<p>The AngularJS Expressions are written in double brackets: <code>{5+5}</code>, <code>{ { name } }</code></p>
 
 <hr>
 
@@ -94,10 +94,10 @@ AngularJS controller is an JavaScript object. An example is provided above.</p>
 <p>Filters can be added to <strong>expressions</strong> and <strong>directives</strong> by using a pipe character <code>|</code>.  </p>
 
 <ul>
-<li>uppercase ``</li>
-<li>lowercase ``</li>
-<li>currency ``</li>
-<li>in directives: <code>ng-repeat = &quot;name in names | orderBy:&#39;country&#39;&quot;</code></li>
+<li>uppercase:  <code>{ { lastName | uppercase } }</code></li>
+<li>lowercase:  <code>{ { lastName | lowercase } }</code></li>
+<li>currency:  <code>{ { price | currency } }</code></li>
+<li>in directives: <code>ng-repeat = &quot; name in names | orderBy:&#39;country&#39; &quot;</code></li>
 </ul>
 
 <h4>AngularJS XMLHttpRequest</h4>

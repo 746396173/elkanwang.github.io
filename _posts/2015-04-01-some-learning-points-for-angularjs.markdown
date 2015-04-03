@@ -43,7 +43,7 @@ The directive that repeats an HTML element: `ng-repeat= "name in names"`
 
 ## AngularJS Expressions
 
-The AngularJS Expressions are written in double brackets: `{5+5}`, ` {{name}} `
+The AngularJS Expressions are written in double brackets: `{5+5}`, ` { { name } } `
 
 ----
 
@@ -78,10 +78,10 @@ AngularJS controller is an JavaScript object. An example is provided above.
 ####AngularJS Filters
 Filters can be added to **expressions** and **directives** by using a pipe character `|`.  
 
-* uppercase `{{ lastName | uppercase }}`
-* lowercase `{{ lastName | lowercase }}`
-* currency `{{ price | currency }}`
-* in directives: `ng-repeat = "name in names | orderBy:'country'" `
+* uppercase:  ` { { lastName | uppercase } } `
+* lowercase:  ` { { lastName | lowercase } } `
+* currency:  ` { { price | currency } } `
+* in directives: `ng-repeat = " name in names | orderBy:'country' " `
 
 ####AngularJS XMLHttpRequest
 This allows you to obtain data from remote server.
