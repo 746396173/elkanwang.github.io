@@ -7,9 +7,9 @@ layout: default
   <ul class="posts">
     {% for post in site.posts %}
         <li class="site">
-          <span> {{ post.date | date_to_long_string }}</span> <h3>&raquo; {{ post.title }}</h3> </br>
+          <span> {{ post.date | date_to_long_string }}</span> <h3> <span class="glyphicon glyphicon-tag"></span> {{ post.title }}</h3> </br>
           <h5> {{ post.excerpt }} </h5> </br>
-          <a class="alert" href="{{ post.url }}">Read More</a>
+          <a class="alert" href="{{ post.url }}"> <span class="glyphicon glyphicon-edit"></span> Read More</a>
         </li>
     {% endfor %}
   </ul>
