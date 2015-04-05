@@ -9,8 +9,11 @@
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
-        <!-- AngularJS -->
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <!-- Angular -->
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+
+        <!-- Angular Animate -->
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular-animate.js"></script>
 
         <!-- Angular UI Router -->
         <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
@@ -42,11 +45,17 @@
 
           <div class="seperator"></div>
 
-          <div ui-view></div>
+          <div class="ui-view-container">
+            <div ui-view class="at-view-slide-in-left
+         at-view-slide-out-right"> </div>
+
+          </div>
+          
+
 
         </div>
 
-        <footer>&copy Elkan Wang, 2015</footer>
+        
 
     </body>
 
