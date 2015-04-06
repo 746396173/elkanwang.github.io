@@ -109,7 +109,7 @@ to prevent collapsing during animation*/
     .navbar li a {
       padding: 5px 15px;
       color: white; }
-    .navbar li:hover {
+    .navbar li .active, .navbar li a:hover {
       background-color: #1f4b47; }
 
 #contact li {

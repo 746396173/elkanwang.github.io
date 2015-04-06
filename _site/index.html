@@ -28,11 +28,11 @@
 
           <nav id="navbar" class="navbar" role="navigation">
               <ul>
-                  <li><a ui-sref="profile">Profile</a></li>
-                  <li><a ui-sref="blog">Blog</a></li>
-                  <li><a ui-sref="projects">Projects</a></li>
-                  <li><a ui-sref="work">Internships</a></li>
-                  <li><a ui-sref="courses">Courses</a></li>
+                  <li><a ui-sref="profile" ui-sref-active="active" >Profile</a></li>
+                  <li><a ui-sref="blog" ui-sref-active="active">Blog</a></li>
+                  <li><a ui-sref="projects" ui-sref-active="active">Projects</a></li>
+                  <li><a ui-sref="work" ui-sref-active="active">Internships</a></li>
+                  <li><a ui-sref="courses" ui-sref-active="active">Courses</a></li>
               </ul>
           </nav>
 
@@ -46,8 +46,7 @@
           <div class="seperator"></div>
 
           <div class="ui-view-container">
-            <div ui-view class="at-view-slide-in-left
-         at-view-slide-out-right"> </div>
+            <div ui-view> </div>
 
           </div>
           

@@ -17,7 +17,8 @@
 			color: $navigation-color;
 		}
 
-		&:hover{
+
+		.active, a:hover{
 			background-color:$navigation-background;
 		}
 
