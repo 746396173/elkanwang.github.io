@@ -96,6 +96,7 @@ to prevent collapsing during animation*/
   opacity: 1; }
 
 [ui-view].ng-leave {
+  position: absolute;
   opacity: 0; }
 
 [ui-view].ng-leave-active {
