@@ -71,6 +71,9 @@ a.foo {
     background-color: #183936;
     padding: 10px; }
 
+footer {
+  padding-bottom: 100px; }
+
 /* Have to set height explicity on ui-view 
 to prevent collapsing during animation*/
 .ui-view-container {
