@@ -1,22 +1,24 @@
 .navbar {
 	font-size: 150%;
+	text-transform: uppercase;
+  	letter-spacing: 2px;
 	float: right;
 	padding: 42px 0 0 30px;
-	margin: 0px 80px;
+	margin: 0px 20px;
+	transition: all .5s ease;
 
 	li {
 		float: left;
-		margin: 0 0 0 15px;
+		margin: 0 0 0 5px;
 		padding: 5px;
 		list-style-type: none;
 		border-bottom-color: white;
-		transition:all .5s ease;
 
 		a {
 			padding: 5px 15px;
 			color: $navigation-color;
+			transition: all .5s ease;
 		}
-
 
 		.active, a:hover{
 			background-color:$navigation-background;
