@@ -1,28 +1,39 @@
 @-webkit-keyframes rotateNav {
   0% {
-    transform: none; }
+    -webkit-transform: none;
+            transform: none; }
   25% {
-    transform: rotate3d(1, 0, -1, 15deg); }
+    -webkit-transform: rotate3d(1, 0, -1, 15deg);
+            transform: rotate3d(1, 0, -1, 15deg); }
   75% {
-    transform: rotate3d(1, 0, -1, -15deg); }
+    -webkit-transform: rotate3d(1, 0, -1, -15deg);
+            transform: rotate3d(1, 0, -1, -15deg); }
   100% {
-    transform: none; } }
+    -webkit-transform: none;
+            transform: none; } }
 @keyframes rotateNav {
   0% {
-    transform: none; }
+    -webkit-transform: none;
+            transform: none; }
   25% {
-    transform: rotate3d(1, 0, -1, 15deg); }
+    -webkit-transform: rotate3d(1, 0, -1, 15deg);
+            transform: rotate3d(1, 0, -1, 15deg); }
   75% {
-    transform: rotate3d(1, 0, -1, -15deg); }
+    -webkit-transform: rotate3d(1, 0, -1, -15deg);
+            transform: rotate3d(1, 0, -1, -15deg); }
   100% {
-    transform: none; } }
+    -webkit-transform: none;
+            transform: none; } }
 @-webkit-keyframes rotateIcon {
   0% {
-    transform: none; }
+    -webkit-transform: none;
+            transform: none; }
   50% {
-    transform: rotate(180deg); }
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
   100% {
-    transform: rotate(360deg); } }
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 body {
   font-family: "Metrophobic", Helvetica, sans-serif; }
 
@@ -113,7 +124,8 @@ to prevent collapsing during animation*/
   #contact li img {
     margin: 0 20px; }
     #contact li img:hover {
-      animation: rotateIcon 5s linear infinite; }
+      -webkit-animation: rotateIcon 5s linear infinite;
+              animation: rotateIcon 5s linear infinite; }
 
 .subject {
   background-color: #1b403d;
@@ -136,13 +148,7 @@ px
   font-weight: 800;
   color: #222;
   border: 2px solid #eee;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
   border-radius: 5px;
-  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   -ms-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   -o-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); }
@@ -434,5 +440,3 @@ a.alert {
 .highlight .gc {
   color: #999;
   background-color: #EAF2F5; }
-
-/*# sourceMappingURL=main.css.map */
