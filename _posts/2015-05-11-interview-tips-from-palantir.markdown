@@ -84,7 +84,7 @@ Now it comes to the difficult part, optimization. To improve the algorithm.
 
 
 ####References
-[How to ace a system design interview](https://www.palantir.com/2011/10/how-to-ace-a-systems-design-interview/)
-[The coding interview](https://www.palantir.com/2011/10/the-coding-interview/)
-[How to ace an algorithm interview](https://www.palantir.com/2011/09/how-to-ace-an-algorithms-interview/)
+[How to ace a system design interview](https://www.palantir.com/2011/10/how-to-ace-a-systems-design-interview/)    
+[The coding interview](https://www.palantir.com/2011/10/the-coding-interview/)    
+[How to ace an algorithm interview](https://www.palantir.com/2011/09/how-to-ace-an-algorithms-interview/)    
 and you can see more useful posts from [Palantir blog](https://www.palantir.com/category/blogs/)
