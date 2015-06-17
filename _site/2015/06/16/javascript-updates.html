@@ -61,9 +61,42 @@ for (var i=0; i&lt;5; i++) {
 }
 </code></pre></div>
 <p>如果不使用closure，print出来的永远都是6。
-而正是因为这个原因，它可以用于：
-1. modularization
-2. setting private members</p>
+而正是因为这个原因，它可以用于：</p>
+
+<ol>
+<li>modularization</li>
+<li>setting private members</li>
+</ol>
+
+<h3>10个javascript性能提升的技巧</h3>
+
+<ol>
+<li>use local variable
+当一个variable被引用的时候，js就会在作用域链重的不同的成员中查找这个variable。作用域链指在当前作用下可用的var的集合，通常分为global variable和local variable。<br>
+简单地来说，如果js在作用域链中查找的深度越大，操作消耗的时间越多。引擎首先从this开始查找local variable，然后是function参数，本地定义的var，最后是所有的global var。因为局部变量在这条链的起端，所以速度是最快的。所以如果要用global var很多次的时候，最好是先定义成局部变量。比如：</li>
+</ol>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myID&#39;</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;yourID&#39;</span><span class="p">);</span>
+</code></pre></div>
+<p>就应该改写成</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">    <span class="kd">var</span> <span class="nx">doc</span> <span class="o">=</span> <span class="nb">document</span><span class="p">,</span>
+    <span class="nx">a</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;myID&#39;</span><span class="p">),</span>
+    <span class="nx">b</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;yourID&#39;</span><span class="p">);</span>
+</code></pre></div>
+<ol>
+<li><p>不要使用with()
+with()会再作用域链最前端添加额外的变量。</p></li>
+<li><p>小心使用closure
+包括 closure variable, global variable, local variable</p></li>
+<li><p>对象属性和数组元素都比变量慢
+一般来说，js的data一般有四种方式来access：数值，变量，对象属性，数组元素</p></li>
+<li><p>不要在数组中挖很深</p></li>
+<li><p>不要使用for-in</p></li>
+<li><p>在loop的时候把控制条件和控制变量合并起来</p></li>
+<li><p>为HTML集合对象定义数组</p></li>
+<li><p>不要碰DOM</p></li>
+<li><p>修改css类，而不是style</p></li>
+</ol>
 
 			</div>
 
