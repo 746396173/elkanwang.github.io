@@ -1,6 +1,7 @@
 **/*.scssc
 **/*.map
-
+_posts/
+*.swp
 svg
 
 # grunt related files
