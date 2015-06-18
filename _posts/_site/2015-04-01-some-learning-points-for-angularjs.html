@@ -1,0 +1,124 @@
+<p>AngularJS is one of the most popular front-end javascript framework at this time. It is great to be used to develop a single page web application. It extends HTML attributes with <strong>Directives</strong>, and binds data to HTML with <strong>Expressions</strong>. It’s well-known for its <strong>“Data Binding”</strong>.</p>
+
+<hr />
+
+<h2 id="ng-directives">ng-directives</h2>
+
+<h4 id="ng-app">ng-app</h4>
+<p>The directive defines an AngularJS aplication</p>
+
+<h4 id="ng-model">ng-model</h4>
+<p>The directive binds the value of HTML controls (input, select, textarea, etc.) to application data. It can be useful in:</p>
+
+<ul>
+  <li>Provide type validation for application data</li>
+  <li>Provide status for application data</li>
+  <li>Provide CSS classes for HTML elements</li>
+  <li>Bind HTML elements to HTML forms</li>
+</ul>
+
+<h4 id="ng-bind">ng-bind</h4>
+<p>The directive binds application data to the HTML view</p>
+
+<p>```html</p>
+<div ng-app="my-app">
+	<p><input type="text" ng-model="name" /></p>
+	<p ng-bind="name"></p>
+</div>
+<p>```</p>
+
+<h3 id="more">More</h3>
+<p>####ng-init
+The directive that initializes AngularJS application variable. However, this is uncommon. It is a better prace to initialize variables in controllers.
+####ng-repeat
+The directive that repeats an HTML element: <code>ng-repeat= "name in names"</code></p>
+
+<hr />
+
+<h2 id="angularjs-expressions">AngularJS Expressions</h2>
+
+<p>The AngularJS Expressions are written in double brackets: <code>{5+5}</code>, ` { { name } } `</p>
+
+<hr />
+
+<h2 id="angular-applications">Angular Applications</h2>
+
+<p>AngularJS modules define applications, controllers control applications</p>
+
+<p>```html</p>
+<div ng-app="myApp" ng-controller="myCtrl">
+	First Name: <input type="text" ng-model="firstName" /><br />
+	Last Name: <input type="text" ng-model="lastName" /><br />
+	<br />
+	Full Name: 
+</div>
+
+<script>
+	var app = angular.module('myApp', []);
+	app.controller('myCtrl', function($scope) {
+	    $scope.firstName= "John";
+	    $scope.lastName= "Doe";
+	});
+</script>
+
+<p>```</p>
+
+<h3 id="angularjs-controllers">AngularJS Controllers</h3>
+<p>AngularJS applications are controlled by controllers. And controllers are defined by <strong>ng-control</strong>.<br />
+AngularJS controller is an JavaScript object. An example is provided above.</p>
+
+<hr />
+
+<h3 id="more-angularjs-features">More AngularJS Features</h3>
+<p>####AngularJS Filters
+Filters can be added to <strong>expressions</strong> and <strong>directives</strong> by using a pipe character <code>|</code>.</p>
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>uppercase:  ` { { lastName</td>
+          <td>uppercase } } `</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>lowercase:  ` { { lastName</td>
+          <td>lowercase } } `</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>currency:  ` { { price</td>
+          <td>currency } } `</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>in directives: <code>ng-repeat = " name in names | orderBy:'country' " </code></li>
+</ul>
+
+<h4 id="angularjs-xmlhttprequest">AngularJS XMLHttpRequest</h4>
+<p>This allows you to obtain data from remote server.</p>
+
+<p><code>javascript
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+	$http.get("http://www.w3schools.com/angular/customers.php")
+	.success(function(response) {$scope.names = response.records;});
+});
+</code></p>
+
+<h4 id="resources">Resources:</h4>
+<ul>
+  <li><a href="http://www.w3schools.com/angular/angular_directives.asp">w3schools</a></li>
+</ul>

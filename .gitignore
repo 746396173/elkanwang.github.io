@@ -1,6 +1,6 @@
 **/*.scssc
 **/*.map
-_posts/
+_sites/
 *.swp
 svg
 
