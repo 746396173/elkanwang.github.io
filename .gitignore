@@ -2,6 +2,7 @@
 **/*.map
 _sites/
 *.swp
+sass/
 svg
 
 # grunt related files

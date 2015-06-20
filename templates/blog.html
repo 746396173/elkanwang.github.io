@@ -3,24 +3,15 @@ layout: default
 ---
 
 <div id="blog" class="block">
-  <h2 class="title">Blog Posts</h1>
+  <h1 class="title">Blog Posts</h1>
   <ul class="posts">
     {% for post in site.posts %}
         <li class="site">
-          <span> {{ post.date | date_to_long_string }}</span> <h3> <span class="glyphicon glyphicon-tag"></span> {{ post.title }}</h3> </br>
-          <h5> {{ post.excerpt }} </h5> </br>
-          <a class="alert" href="{{ post.url }}"> <span class="glyphicon glyphicon-edit"></span> Read More</a>
+          <span> {{ post.date | date_to_long_string }}</span> <h3> </span><a href="{{post.url}}"> {{ post.title }}</a> </h3> </br>
+          <div> {{ post.excerpt }} </div>
         </li>
     {% endfor %}
   </ul>
-</div>
-
-<div class="block">
-    <h2 class="title">Here are some blogs that I've been reading:</h2>
-    <ul>
-      <li><a href="http://idiotwu.me">那个傻瓜瓜</a></li>
-      <li><a href="http://callmenick.com">Call Me Nick</a></li>
-    </ul>
 </div>
 
 <footer>&copy Jacob Wang, 2015</footer>

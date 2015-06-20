@@ -31,22 +31,13 @@
 // logos
 
 #contact {
+    text-align: center;
 
 	li {
 		margin: auto 10px;
-		float: left;
+        display: inline;
 		list-style-type: none;
 		transition:all .5s ease;
-
-		img{
-			margin: 0 20px;
-			&:hover {
-				animation: rotateIcon 5s linear infinite;
-			}
-		}
-
-		&:hover {
-			// background-color: $navigation-background;
-		}
+        margin: 0px 10px;
 	}
 }

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>API Design的一点读书笔记</title>
+        <meta name="viewport" content="width=device-width">
+
+    </head>
+    <body>
+
+        <div id="post" class="block">
+
+			<h2 class="title">API Design的一点读书笔记</h2>
+			<p class="meta">19 June 2015</p>
+
+			<div class="post">
+			<p>API就是application programming interface。说到底，api其实是很简单的东西，就是export给别人的一个interface，告诉他们怎么来使用你开发的软件或者工具。所以，api的设计就会直接影响到继续开发的难度。好的api设计可以让别的开发者很好地在基于你的工具上再次开发。</p>
+
+<p>好的API设计是很subjective的一件事情，但是有几点是大家都达到共识的。</p>
+
+<ol>
+<li>Easy to learn and memorize</li>
+<li>Leads to readable code</li>
+<li>Hard to misuse</li>
+<li>Easy to extend</li>
+<li>Complete</li>
+</ol>
+
+<h4>Easy to Learn and Memorize</h4>
+
+<p>一个很容易学习的API一般都有conssitent naming conventions andpatterns， economy of concepts 和 predictability的特征。一个小的API容易记住是因为它没有什么东西好记的，但是一个好的API容易被记住是因为他的convention使你很容易可以reapply已经学会的东西。</p>
+
+<h4>Leads to Readable Code</h4>
+
+<p>Code is only written once, but read by many other people. 所以说，code的可读性也是非常重要的。</p>
+
+<h4>Hard to Misuse</h4>
+
+<p>好的API设计应该是让client可以很容易的使用，并且在使用的时候不容易出错，比如没有按特定的顺序，或者是有特殊的side effect。</p>
+
+<h4>Easy to Extend</h4>
+
+<h4>Complete</h4>
+
+<p>然后，就说说到底应该怎么来设计API。通常来说，API的设计都是在几个人的合作下，经过很长一段时间推敲出来的结果。</p>
+
+<ol>
+<li>Know the Requirements</li>
+<li>Write Use Cases Before Write Any Code</li>
+<li>Look For Similar APIs in the Same Library</li>
+<li>Define the API Before You Implement It</li>
+<li>Have Your Peers Review Your API</li>
+<li>Write Several Examples Against the API</li>
+<li>Prepare For Extensions</li>
+<li>Don&#39;t Publish Internal APIs without Review</li>
+<li>When in Doubt, Leave It Out</li>
+</ol>
+
+<p>There is no a set of strict rules that you have to follow. However, here are some guidelines that you may want to consider when you are desining your own APIs.</p>
+
+<p>First, the naming of the functions.</p>
+
+<ol>
+<li>Choose Self-explanatory Names and Signatures</li>
+</ol>
+
+<p>It really helps make sure that your API leads to readable code. It also helps people learn how to use your API. So, choose names to be self-explanatory and also make sure they are consistent.</p>
+
+<ol>
+<li>Choose Unambiguous Names for Related Things</li>
+<li>Beware of False Consistency</li>
+<li>Avoid Abbreviations</li>
+<li>Prefer Specific Names to General Names</li>
+<li>Don&#39;t Be a Slave of an Underlying API&#39;s Naming Practices</li>
+</ol>
+
+<p>Then, the semantics of your API.</p>
+
+<ol>
+<li>CHoose Good Defaults</li>
+<li>Avoid Making Your APIs Overly Clever</li>
+<li>Pay Attention to Edge Cases</li>
+</ol>
+
+<p>Then, the structure of your API.</p>
+
+<ol>
+<li>Stive for Property-based API</li>
+</ol>
+
+<p>e.g. setSize, setStyle, etc.</p>
+
+<p>The above are the notes that I&#39;ve taken when reading the API design written by Jasmin Blanchette. </p>
+
+<p>I haven&#39;t yet had the opportunity to design a vast API for my own yet. But certainly it was good read to get to know more about API and the considerations that I need take into account when I design my own API.</p>
+
+<p>API is used very extensively in web development. When you are using a framework, either front-end or back-end, you are interacting with the framework through the API. When you are browsing a website, many API calls are running behind the scene handling different requests.</p>
+
+
+            <div>If you have anything to comment on the above post, please leave me a message :)</div>
+			</div>
+
+		</div>
+        
+        
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES * * */
+                var disqus_shortname = 'innercircle2015';
+                
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        
+
+        <footer>&copy Elkan Wang, 2015</footer>
+
+    </body>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Font -->
+    <link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'YOUR CODE GENERATED BY GOOGLE', 'auto');
+      ga('send', 'pageview');
+    </script>
+</html>

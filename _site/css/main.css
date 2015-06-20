@@ -1,53 +1,45 @@
 @-webkit-keyframes rotateNav {
   0% {
-    -webkit-transform: none;
-            transform: none; }
+    transform: none; }
   25% {
-    -webkit-transform: rotate3d(1, 0, -1, 15deg);
-            transform: rotate3d(1, 0, -1, 15deg); }
+    transform: rotate3d(1, 0, -1, 15deg); }
   75% {
-    -webkit-transform: rotate3d(1, 0, -1, -15deg);
-            transform: rotate3d(1, 0, -1, -15deg); }
+    transform: rotate3d(1, 0, -1, -15deg); }
   100% {
-    -webkit-transform: none;
-            transform: none; } }
+    transform: none; } }
 @keyframes rotateNav {
   0% {
-    -webkit-transform: none;
-            transform: none; }
+    transform: none; }
   25% {
-    -webkit-transform: rotate3d(1, 0, -1, 15deg);
-            transform: rotate3d(1, 0, -1, 15deg); }
+    transform: rotate3d(1, 0, -1, 15deg); }
   75% {
-    -webkit-transform: rotate3d(1, 0, -1, -15deg);
-            transform: rotate3d(1, 0, -1, -15deg); }
+    transform: rotate3d(1, 0, -1, -15deg); }
   100% {
-    -webkit-transform: none;
-            transform: none; } }
+    transform: none; } }
 @-webkit-keyframes rotateIcon {
   0% {
-    -webkit-transform: none;
-            transform: none; }
+    transform: none; }
   50% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); }
+    transform: rotate(180deg); }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
+    transform: rotate(360deg); } }
 body {
-  font-family: "Metrophobic", Helvetica, sans-serif; }
+  font-family: "Garamond", arial, sans-serif;
+  color: #eee;
+  letter-spacing: .5px; }
 
 body {
-  color: white;
+  color: #eee;
   background-color: #333333;
-  padding: 50px; }
+  padding: 50px;
+  min-width: 800px; }
 
 /* links */
 a:link,
 a:visited {
   text-decoration: none;
   font-weight: bold;
-  color: white;
+  color: #eee;
   outline: none; }
 
 a:hover {
@@ -119,16 +111,14 @@ to prevent collapsing during animation*/
     .navbar li .active, .navbar li a:hover {
       background-color: #1f4b47; }
 
-#contact li {
-  margin: auto 10px;
-  float: left;
-  list-style-type: none;
-  transition: all .5s ease; }
-  #contact li img {
-    margin: 0 20px; }
-    #contact li img:hover {
-      -webkit-animation: rotateIcon 5s linear infinite;
-              animation: rotateIcon 5s linear infinite; }
+#contact {
+  text-align: center; }
+  #contact li {
+    margin: auto 10px;
+    display: inline;
+    list-style-type: none;
+    transition: all .5s ease;
+    margin: 0px 10px; }
 
 .subject {
   background-color: #1b403d;
@@ -139,19 +129,20 @@ to prevent collapsing during animation*/
   .subject .course {
     padding-left: 10px; }
 
-#profile img {
-  float: right;
-  width: 400px;
-  margin: 20px; }
-
 px
 .alert, .success, .warning, .error {
   padding: 15px;
   margin-bottom: 20px;
   font-weight: 800;
-  color: #222;
+  color: #eee;
   border: 2px solid #eee;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   -ms-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   -o-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); }
@@ -447,3 +438,5 @@ li.site {
 .highlight .gc {
   color: #999;
   background-color: #EAF2F5; }
+
+/*# sourceMappingURL=main.css.map */
