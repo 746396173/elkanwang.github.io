@@ -26,8 +26,17 @@
         <script src="scripts/myApp.js"></script>
         <script src="scripts/mainCtrl.js"></script>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+
+    <script type="text/javascript">
+        $(window).load(function() {
+	        $(".loader").delay(2800).fadeOut("slow");
+        })
+    </script>
+
     </head>
     <body ng-app="myApp" ng-controller="mainCtrl">
+        <div class="loader"></div>
         <div ng-show="isShow" ng-click="toggleMenu()"class="overlay">
             <div class="wrap">
                 <ul class="wrap-nav">
@@ -52,11 +61,9 @@
 	        <a ng-class="{'menu-open': !isMenuOpen, 'menu-close': isMenuOpen}" href="#" ng-click="toggleMenu()"></a>
         </div>
           <div class="seperator"></div>
-        </div>
 
           <div class="ui-view-container">
             <div ui-view> </div>
-            <i class="icon-linkedin"></i>
           </div>
 
         </div>

@@ -1,0 +1,36 @@
+#profile {
+    paper-material {
+        height: 50vh;
+        width: 100%;
+        margin: 30px 0;
+        padding: 0;
+        vertical-align: middle;
+        display: table;
+        
+        h1 {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+}
+
+.social {
+    text-align: center;
+    ul {
+        display: inline-block;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        float: left;
+        padding: 0 50px;
+    }
+    li i {
+        font-size: 1.5em;
+        &:hover {
+            color: $post-color;
+           	transition-property:all .2s linear 0s;
+        }
+    }
+}

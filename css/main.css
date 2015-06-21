@@ -35,9 +35,8 @@
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
 body {
-  font-family: "Garamond", arial, sans-serif;
-  color: black;
-  letter-spacing: .5px; }
+  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  color: black; }
 
 body {
   color: black;
@@ -72,6 +71,15 @@ a.foo {
 
 footer {
   padding-bottom: 20px; }
+
+.loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url("../img/loader.gif") 50% 50% no-repeat #f9f9f9; }
 
 /* Have to set height explicity on ui-view 
 to prevent collapsing during animation*/
@@ -172,7 +180,7 @@ to prevent collapsing during animation*/
 .navbar {
   font-size: 150%;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-align: center;
   padding: 60px 0 0 30px;
   margin: 0px 20px;
@@ -256,6 +264,17 @@ to prevent collapsing during animation*/
     font-weight: bold; }
   .subject .course {
     padding-left: 10px; }
+
+#profile paper-material {
+  height: 50vh;
+  width: 100%;
+  margin: 30px 0;
+  padding: 0;
+  vertical-align: middle;
+  display: table; }
+  #profile paper-material h1 {
+    display: table-cell;
+    vertical-align: middle; }
 
 .social {
   text-align: center; }
@@ -555,3 +574,30 @@ paper-material {
 .highlight .gc {
   color: #999;
   background-color: #EAF2F5; }
+
+#profile paper-material {
+  height: 50vh;
+  width: 100%;
+  margin: 30px 0;
+  padding: 0;
+  vertical-align: middle;
+  display: table; }
+  #profile paper-material h1 {
+    display: table-cell;
+    vertical-align: middle; }
+
+.social {
+  text-align: center; }
+  .social ul {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  .social li {
+    float: left;
+    padding: 0 50px; }
+  .social li i {
+    font-size: 1.5em; }
+    .social li i:hover {
+      color: #eee;
+      transition-property: all .2s linear 0s; }
