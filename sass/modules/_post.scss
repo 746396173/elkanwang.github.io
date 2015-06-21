@@ -55,6 +55,29 @@ li.site {
   background-color: #333;
 }
 
+paper-material {
+    background-color: $post-color;
+    margin: 5px;
+    padding: 15px;
+}
+.title{
+    margin:0;
+    padding:0;
+    width:100%;
+    font-weight: 150%;
+    min-height: 20%;
+    text-align: center;
+    vertical-align: center;
+    border-bottom: 2px solid $font-color;
+    margin-bottom: 30px;
+}
+.posts paper-material {
+background-color: $post-color;
+padding: 20px;
+vertical-align: middle;
+min-height: 40px;
+}
+
 #disqus_thread{
     margin: 0px 10px;
 }

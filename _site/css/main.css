@@ -41,7 +41,7 @@ body {
 
 body {
   color: black;
-  background-color: white; }
+  background-color: white, 20; }
 
 /* links */
 a:link,
@@ -270,8 +270,7 @@ to prevent collapsing during animation*/
   .social li i {
     font-size: 1.5em; }
     .social li i:hover {
-      color: white;
-      background-color: black;
+      color: #eee;
       transition-property: all .2s linear 0s; }
 
 /*****************************************************************************/
@@ -318,6 +317,28 @@ li.site {
 
 .post pre.terminal code {
   background-color: #333; }
+
+paper-material {
+  background-color: #eee;
+  margin: 5px;
+  padding: 15px; }
+
+.title {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-weight: 150%;
+  min-height: 20%;
+  text-align: center;
+  vertical-align: center;
+  border-bottom: 2px solid black;
+  margin-bottom: 30px; }
+
+.posts paper-material {
+  background-color: #eee;
+  padding: 20px;
+  vertical-align: middle;
+  min-height: 40px; }
 
 #disqus_thread {
   margin: 0px 10px; }

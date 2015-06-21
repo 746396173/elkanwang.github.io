@@ -5,17 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>API Design的一点读书笔记</title>
         <meta name="viewport" content="width=device-width">
-
+        <!-- Polymer -->
+        <script src="/bower_components/webcomponentsjs/webcomponents.js"></script>
+        <link rel="import" href="/bower_components/polymer/polymer-mini.html">
+        <link rel="import" href="/bower_components/paper-material/paper-material.html">
+        <link rel="import" href="/bower_components/paper-fab/paper-fab.html">
+        <link rel="import" href="/bower_components/iron-icons/iron-icons.html">
     </head>
     <body>
-        <div class="menu"> 
-            <a href="/">Home</a> 
-        </div>
+        <!--<paper-fab icon="add"><a href="/">Home</a></paper-fab> -->
         <div id="post" class="block">
 
 			<h2 class="title">API Design的一点读书笔记</h2>
-			<p class="meta">19 June 2015</p>
 
+            <paper-material>
 			<div class="post">
 			<p>API就是application programming interface。说到底，api其实是很简单的东西，就是export给别人的一个interface，告诉他们怎么来使用你开发的软件或者工具。所以，api的设计就会直接影响到继续开发的难度。好的api设计可以让别的开发者很好地在基于你的工具上再次开发。</p>
 
@@ -102,6 +105,7 @@
 
             <div>If you have anything to comment on the above post, please leave me a message :)</div>
 			</div>
+            </paper-material>
 
 		</div>
         
