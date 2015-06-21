@@ -13,7 +13,9 @@
     li i {
         font-size: 1.5em;
         &:hover {
-            font-color: lighten($font-color, 70);
+            color: white;
+            background-color: $font-color;
+           	transition-property:all .2s linear 0s;
         }
     }
 }

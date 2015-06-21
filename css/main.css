@@ -270,7 +270,9 @@ to prevent collapsing during animation*/
   .social li i {
     font-size: 1.5em; }
     .social li i:hover {
-      font-color: #b3b3b3; }
+      color: white;
+      background-color: black;
+      transition-property: all .2s linear 0s; }
 
 /*****************************************************************************/
 /*
