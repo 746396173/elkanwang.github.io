@@ -142,6 +142,10 @@ to prevent collapsing during animation*/
   .navbar {
     display: none; }
 
+  .menu {
+    left: 5px;
+    top: 5px; }
+
   .wrap ul.wrap-nav > li {
     width: 100%;
     padding: 20px 0;
@@ -206,7 +210,7 @@ to prevent collapsing during animation*/
 
 .menu {
   position: absolute;
-  right: 5%;
+  left: 5%;
   top: 5%;
   z-index: 999; }
   .menu a {
