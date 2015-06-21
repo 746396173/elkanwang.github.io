@@ -37,14 +37,14 @@
         </div>
         <div>
 
-          <nav id="navbar" class="navbar" role="navigation">
+          <div id="navbar" class="navbar" role="navigation">
               <ul>
                   <li><a ui-sref="profile" ui-sref-active="active" >Profile</a></li>
                   <li><a ui-sref="blog" ui-sref-active="active">Blog</a></li>
                   <li><a ui-sref="projects" ui-sref-active="active">Projects</a></li>
                   <li><a ui-sref="work" ui-sref-active="active">Internships</a></li>
               </ul>
-          </nav>
+          </div>
         <div class="menu">
 	        <a ng-class="{'menu-open': !isMenuOpen, 'menu-close': isMenuOpen}" href="#" ng-click="toggleMenu()"></a>
         </div>
@@ -53,6 +53,7 @@
 
           <div class="ui-view-container">
             <div ui-view> </div>
+            <i class="icon-linkedin"></i>
           </div>
 
         </div>
