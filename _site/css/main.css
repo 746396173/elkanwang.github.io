@@ -170,7 +170,7 @@ to prevent collapsing during animation*/
 .social-icon i {
   margin-top: 12px; }
 
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 60em) {
   .navbar {
     display: none; }
 
@@ -234,9 +234,8 @@ to prevent collapsing during animation*/
 
 .menu {
   position: absolute;
-  right: 50px;
-  top: 6px;
-  height: 50px;
+  right: 5%;
+  top: 5%;
   z-index: 999; }
   .menu a {
     text-decoration: none; }
@@ -330,6 +329,9 @@ li.site {
 
 .post pre.terminal code {
   background-color: #333; }
+
+#disqus_thread {
+  margin: 0px 10px; }
 
 /*
  * GitHub style for Pygments syntax highlighter, for use with Jekyll
