@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Elkan Wang</title>
+        <title>Life is Good</title>
         <meta name="viewport" content="width=device-width">
 
         <!-- jQuery -->
@@ -17,13 +17,24 @@
 
         <!-- Angular UI Router -->
         <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+        <!-- Polymer -->
+        <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
 
         <script src="scripts/myApp.js"></script>
         <script src="scripts/mainCtrl.js"></script>
-
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     </head>
     <body ng-app="myApp" ng-controller="mainCtrl">
-
+        <div ng-show="isShow" ng-click="toggleMenu()"class="overlay">
+            <div class="wrap">
+                <ul class="wrap-nav">
+                <li><a ui-sref="profile" ui-sref-active="active" >Profile</a></li>
+                  <li><a ui-sref="blog" ui-sref-active="active">Blog</a></li>
+                  <li><a ui-sref="projects" ui-sref-active="active">Projects</a></li>
+                  <li><a ui-sref="work" ui-sref-active="active">Internships</a></li>
+                </ul>
+            </div>
+        </div>
         <div>
 
           <nav id="navbar" class="navbar" role="navigation">
@@ -34,20 +45,17 @@
                   <li><a ui-sref="work" ui-sref-active="active">Internships</a></li>
               </ul>
           </nav>
-
+        <div class="menu">
+	        <a ng-class="{'menu-open': !isMenuOpen, 'menu-close': isMenuOpen}" href="#" ng-click="toggleMenu()"></a>
+        </div>
           <div class="seperator"></div>
+        </div>
 
           <div class="ui-view-container">
             <div ui-view> </div>
-
           </div>
-          
-
 
         </div>
-
-        
-
     </body>
 
     <!-- Custom CSS -->

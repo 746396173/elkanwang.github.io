@@ -1,7 +1,6 @@
 body{
 	color: $font-color;
 	background-color: lighten($background-color,20);
-	padding: 50px;
     min-width: 800px;
 }
 
@@ -34,12 +33,10 @@ a.foo {
 
 /* block */
 .block {
-	background-color: $block-background;
 	padding: 20px;
 	margin: 5% auto;
 
 	.title {
-		background-color: darken($block-background,5);
 		padding: 10px;
 	}
 }

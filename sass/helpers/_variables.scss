@@ -1,20 +1,16 @@
-$font:"Garamond",arial,sans-serif; 
+$font: "Garamond", arial, sans-serif; 
 
-$font-color: #eee;
-
-$success-color: #b7c11e;
-$warning-color: #23a38f;
-$error-color: #f0563d;
+$font-color: black;
 
 $shadow-color: rgba(0, 0, 0, .2);
 
 $font-header-weight : 800;
-$font-alert-weight: 800;
 
-$background-color: #000;
+$background-color: white;
 
 $navigation-background: #1f4b47;
-$navigation-color: white;
+$navigation-color: $font-color;
+$menu-color: $font-color;
 
 $block-background: #1f4b47;
 

@@ -1,4 +1,9 @@
 myApp.controller('mainCtrl', function($scope) {
-        $scope.firstName= "John";
-        $scope.lastName= "Doe";
+        $scope.isShow = false;
+        $isMenuOpen = false;
+
+        $scope.toggleMenu = function(){
+            $scope.isMenuOpen = !$scope.isMenuOpen;
+            $scope.isShow = !$scope.isShow;
+        };
     });
