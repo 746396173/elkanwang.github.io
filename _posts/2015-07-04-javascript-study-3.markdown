@@ -1,4 +1,5 @@
---- layout: post
+--- 
+layout: post
 title:  "Javascript Study - 3"
 date:   2015-07-04  
 comments: true
