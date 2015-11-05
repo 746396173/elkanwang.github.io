@@ -22,21 +22,14 @@
         <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
         <link rel="import" href="bower_components/polymer/polymer-mini.html">
         <link rel="import" href="bower_components/paper-material/paper-material.html">
- 
+
         <script src="scripts/myApp.js"></script>
         <script src="scripts/mainCtrl.js"></script>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    
-
-    <script type="text/javascript">
-        $(window).load(function() {
-	        $(".loader").delay(2800).fadeOut("slow");
-        })
-    </script>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
     </head>
     <body ng-app="myApp" ng-controller="mainCtrl">
-        <div class="loader"></div>
         <div ng-show="isShow" ng-click="toggleMenu()"class="overlay">
             <div class="wrap">
                 <ul class="wrap-nav">

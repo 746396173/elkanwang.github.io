@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Javascript Study - 2</title>
+        <meta name="viewport" content="width=device-width">
+        <!-- Polymer -->
+        <script src="/bower_components/webcomponentsjs/webcomponents.js"></script>
+        <link rel="import" href="/bower_components/polymer/polymer-mini.html">
+        <link rel="import" href="/bower_components/paper-material/paper-material.html">
+        <link rel="import" href="/bower_components/paper-fab/paper-fab.html">
+        <link rel="import" href="/bower_components/iron-icons/iron-icons.html">
+    </head>
+    <body>
+        <!--<paper-fab icon="add"><a href="/">Home</a></paper-fab> -->
+        <div id="post" class="block">
+
+			<h2 class="title">Javascript Study - 2</h2>
+
+            <paper-material>
+			<div class="post">
+			<h1>Expressions and Operators</h1>
+
+<p>An <em>expression</em> is a phrase of JavaScript that a JavaScript interpreter can <em>evaluate</em> to produce a value. </p>
+
+<h2>Primary Expression</h2>
+
+<ul>
+<li>Constant values</li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text">1.23
+&quot;hello&quot;
+/pattern/
+</code></pre></div>
+<ul>
+<li>Some of JavaScript&#39;s reserved words</li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text">true
+false
+null
+this  // Evaluate to the &quot;current&quot; object
+</code></pre></div>
+<ul>
+<li>variable reference</li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text">i
+sum
+undefined // undefined is a global variable, not a keyword like *null*
+</code></pre></div>
+<h2>Object and Array Initializers</h2>
+
+<p>Also known as &quot;object literals&quot; and &quot;array literals&quot;.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var a = [];
+var b = [1+2, 3+4];
+var matrix = [[1,2,3], [4,5,6], [7,8,9]];
+var sparseArray = [1,,,,5];
+
+var p = { x:2.3, y:-1.3 };
+</code></pre></div>
+<h2>Function Definition Expressions</h2>
+
+<p>A function definition expression is a &quot;function literal&quot;.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var square = function(x) { return x*x; };
+</code></pre></div>
+<h2>Property Access Expressions</h2>
+<div class="highlight"><pre><code class="language-text" data-lang="text">expression . identifier
+expression [ expression ]
+</code></pre></div>
+<h2>Invocation Expressions</h2>
+
+<p>An <em>invocation expression</em> is JavaScript&#39;s syntax for executing a function or method.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">f(0);
+Math.max(x,y,z);
+a.sort();
+</code></pre></div>
+<ol>
+<li>the function expression is evaluated</li>
+<li>the argument expressions are evaluated to produce a list of argument values</li>
+<li>if the value of the function expression is not callable, a TypeError is thrown. </li>
+<li>the argument values are assigned, in order, to the parameter names specified when the function was defined</li>
+<li>the body of the function is executed</li>
+<li>if the function uses <strong>return</strong> statment to return a value, then that value becomes the value of the invocation expression. Otherwise, the value of the invocation expression is <strong>undefined</strong>.</li>
+</ol>
+
+<p>Invocation expressions that are not method invocations use the global object or undefined as the value of <strong>this</strong> keyword.</p>
+
+<h2>Object Creation Expression</h2>
+
+<p>An <em>object creation expression</em> creates a new object and invokes a function (constructor) to initialize the properties of that object.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">new Object()
+new Point(2,3)
+new Object
+new Date
+</code></pre></div>
+<h2>eval()</h2>
+
+<h2>void</h2>
+
+<h1>Statements</h1>
+
+<h2>Expression statements</h2>
+
+<h2>Compound and Empty Statements</h2>
+
+<h2>Declaration Statements</h2>
+
+<h2>Miscellaneous Statements</h2>
+
+<ul>
+<li>with</li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text">with (object)
+    statement
+</code></pre></div>
+<p>The <strong>with</strong> statement is used to temporarily extend the scope chain. This statement adds object to the front of the scope chain, executes statement, and then restores the scope chain to its original state.
+<strong>with</strong> statment should be avoided.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">with(document.forms[0]){
+    name.value = &quot;&quot;;
+    address.value = &quot;&quot;;
+    email.value = &quot;&quot;;
+}
+
+// this can be avoided by:
+
+var f = document.forms[0];
+f.name.value = &quot;&quot;;
+f.address.value = &quot;&quot;;
+f.email.value = &quot;&quot;;
+</code></pre></div>
+<p>note: with statment only provides a shortcut for reading properties, not for creating new properties.</p>
+
+<ul>
+<li>debugger</li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text">function f(o) {
+    if (o === undefined) debugger;
+    ...
+}
+</code></pre></div>
+<ul>
+<li>&quot;use strict&quot;</li>
+</ul>
+
+<p>&quot;use strict&quot; is a <em>directive</em>. Directives are not statements. Two major differences:</p>
+
+<ol>
+<li>It does not include any language keywords</li>
+<li>It can only appear only at the start of a script of at the start of a function body, before any real statements have appeared.</li>
+</ol>
+
+<p>Strict code is executed in <em>strict mode</em>. The differences between strict mode and non-strict mode are the following:</p>
+
+<ol>
+<li>The <strong>with</strong> statement is not allowed in strict mode</li>
+<li>In strict mode, all variables must be declared: a ReferenceError is thrown if you assign a value to an identifier that is not a declared variable, function, function parameter, catch clause parameter, or property of the global object.</li>
+<li>functions invoked as functions (rather than as methods) have a this value of undefined. When a function is invoked with call() or apply(), the this value is exactly the value passed as the first argument.</li>
+<li>Assignments to nonwritable properties and attempts to create new properties on nonextensible objects throw a TypeError.</li>
+<li>Code passed to <strong>eval()</strong> cannot declare variables or define functions in the caller&#39;s scope as it can in non-strict mode. Instead, variable and function definitions live in a new scope created for the <strong>eval()</strong>. This scope is discarded when the <strong>eval()</strong> returns.</li>
+<li>The <strong>arguments</strong> object in a function holds a static copy of the values passed to the function. In non-strict mode, the <strong>arguments</strong> object has &quot;magical&quot; behavior in which elements of the array and named function parameters both refer to the same value.</li>
+<li>A SyntaxError is thrown if the <strong>delete</strong> operator is follwed by an unqualified identifier such as a variable, function, or function parameter.</li>
+<li>An attempt to delete a nonconfigurable property throws a TypeError.</li>
+<li>It is a syntax error for an object literal to define two or more properties by the same name.</li>
+<li>It is a syntax error for a function declaration to have two or more parameters with the same name.</li>
+<li>Octal integer literals are not allowed.</li>
+<li>The identifiers <strong>eval</strong> and <strong>arguments</strong> are treated as keywords, and you are not allowed to change their value. You cannot assign a value to these identifiers, declare them as variables, use them as function names, use them as function parameter names, or use them as the identifier of a <strong>catch</strong> block.</li>
+<li>The ability to examine the call stack is restricted. <strong>arguments.caller</strong> and <strong>arguments.callee</strong> both throw a TypeError. </li>
+</ol>
+
+
+            <div>If you have anything to comment on the above post, please leave me a message :)</div>
+			</div>
+            </paper-material>
+
+		</div>
+        
+        
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES * * */
+                var disqus_shortname = 'innercircle2015';
+                
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        
+
+        <footer>&copy Elkan Wang, 2015</footer>
+
+    </body>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Font -->
+    <link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'YOUR CODE GENERATED BY GOOGLE', 'auto');
+      ga('send', 'pageview');
+    </script>
+</html>

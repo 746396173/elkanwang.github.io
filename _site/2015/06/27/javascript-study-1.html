@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Javascript Study - 1</title>
+        <meta name="viewport" content="width=device-width">
+        <!-- Polymer -->
+        <script src="/bower_components/webcomponentsjs/webcomponents.js"></script>
+        <link rel="import" href="/bower_components/polymer/polymer-mini.html">
+        <link rel="import" href="/bower_components/paper-material/paper-material.html">
+        <link rel="import" href="/bower_components/paper-fab/paper-fab.html">
+        <link rel="import" href="/bower_components/iron-icons/iron-icons.html">
+    </head>
+    <body>
+        <!--<paper-fab icon="add"><a href="/">Home</a></paper-fab> -->
+        <div id="post" class="block">
+
+			<h2 class="title">Javascript Study - 1</h2>
+
+            <paper-material>
+			<div class="post">
+			<p>Inspired by one of the blog posts that I&#39;ve read recently, I&#39;ve decided probably I should read a book to gain a much deeper understanding of javascript so that I can write better code. The auther recommended JavaScript: the Definitive Guide.</p>
+
+<p>This is the part 1 of the study notes and it will cover the core JavaScript part of the book.</p>
+
+<h1>Lexical Structure</h1>
+
+<p>This part covers the lexical structure of JavaScript, i.e. the language itself. Some important things to note:</p>
+
+<ul>
+<li>JS is case sentive, but HTML is not</li>
+</ul>
+
+<h1>Types, Values, and Variables</h1>
+
+<ul>
+<li>primitive types: numbers, strings, boolean, null, undefined</li>
+<li>object types</li>
+</ul>
+
+<p>object is an unordered collection of named values.
+Special objects: Arrays, functions
+Classes: Arrays, functions, Date&#39;s, RegExp and Error</p>
+
+<p>Mutable types: arrays, functions, objects
+Immutable types: numbers, strings, null, undefined, boolean</p>
+
+<p>Lexical scoping: variables declared outside of a function are global variables and are visible everywhere</p>
+
+<h2>Numbers</h2>
+
+<p>The syntax for floating is <code>[digits][.digits][(E|e)[(+|-)]digits]</code>  </p>
+
+<p>There&#39;s no distinction between integers and floating point values. In JS, all numbers are represented as floating-point values (64bit). However, certain operations (e.g. array indexing and bitwise operations) are performed with 32-bit integers.</p>
+
+<p>Besides the arithmetic operators like +, -, *, \/, and %, JavaScript supports more complex mathematical operations through a set of functions and constants defined as properties of the Math object. The example functions provided are: pow, round, ceil, floor, abs, max, min, random, PI, E, sqrt, pow, sin, log, exp. <a href="https://docs.python.org/3/library/math.html">full list</a></p>
+
+<p>Arithmetic in JS doesn&#39;t raise errors in case of <strong>overflow, underflow, or division by zero</strong>. Instead, it produces <em>Infinity</em> or <em>-Infinity</em> for overfulow and underflow. When the underflow happens closer to zero than the smallest representable number, JS returns <em>0</em> or <em>negative 0</em>. Division devided 0 returns <em>Inifinity</em> or <em>-Inifinity</em> or special case <em>NaN</em> when 0 is divided by 0. <em>NaN</em> also raises when infinity is divided by infinity, sqrt a negative number or use arithmetic operators with non-numeric operands. </p>
+
+<p>The <em>NaN</em> has an unusual feature. It doesn&#39;t compare equal to any other value, including itself. When trying to determine if the variable is not-a-number, you should do <em>x != x</em> or <em>isNaN()</em>. There&#39;s a similar function <em>isFinite()</em> to determine if the number is finite. There&#39;s some interesting behavior for zeros.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var zero = 0;
+var negz = -0;
+zero === negz; // =&gt; True
+1/zero === 1/negz; // =&gt; False, Inifinity != -Infinity
+</code></pre></div>
+<p>p.s. because of floating-point precision issue, try to avoid calculations in decimals. Use integers instead.</p>
+
+<p>Dates and Times are also supported by JS. Here&#39;re some exmples</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var then = new Date(2010, 0, 1);
+var later = new Date(2010, 0, 1, 17, 10, 30);
+var now = new Date();
+var elapsed = now - then;
+
+later.getFullYear();
+later.getMonth();
+later.getDay();
+later.getHours();
+later.getUTCHours();
+later.toString();
+later.toUTCString();
+later.toLocaleDateString();
+later.toLocaleTimeString();
+later.toISOString();
+</code></pre></div>
+<h2>Text</h2>
+
+<p>A string is an imutable ordered sequence of 16-bit values, each of which typically represents a Unicode char - strings are JS&#39;s type for representing text. </p>
+
+<p>ECMAScript 5 allows multi-line string literal. </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&quot;two\nlines&quot;
+&quot;one\
+long\
+line&quot;
+</code></pre></div>
+<p>JS supports built-in concatenation of strings. <code>mag = &quot;Hello&quot; + &quot; &quot; + &quot;World&quot;</code></p>
+
+<p>Other functions are:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var s = &quot;Hello, world!&quot;
+s.length;
+s.charAt(0);
+s.charAt(s.length-1);
+s.substring(1,4);
+s.slice(1,4);
+s.slice(-3);
+s.indexOf(&quot;l&quot;);
+s.indexOf(&quot;l&quot;, 3);
+s.lastIndexOf(&quot;l&quot;);
+s.split(&quot;, &quot;);
+s.replace(&quot;h&quot;, &quot;H&quot;);
+s.toUpperCase();
+
+// because strings are immutable, they return a new string
+</code></pre></div>
+<p>Pattern matching: JS defines a <em>RegExp()</em> constructor for creating objects that represent textual patterns. Like Dates, they are simply a specialized kind of object, with a useful API.
+Example:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var text = &quot;testing: 1, 2, 3&quot;;
+var pattern = /\d+/g;
+pattern.test(text);
+text.search(pattern);
+text.match(pattern);
+text.replace(pattern, &quot;#&quot;);
+text.split(/\D+/);
+</code></pre></div>
+<h2>Boolean Values</h2>
+
+<p>Falsy values: undefined, null, 0, -0, NaN, &quot;&quot;</p>
+
+<h2>The Global Object</h2>
+
+<h2>Wrapper Objects</h2>
+
+<p>The temporary objects created when you access a property of a string, number, or boolean are known as wrapper objects. You just need to know that string, number, and boolean values differ from objects in that their properties are read-only and that you can&#39;t define new properties on them. Wrapper objects can be created explicitly by invoking String(), Number(), or Boolean() constructors. 
+<code>
+var s = &quot;test&quot;;
+var S = new String(s);
+s == S;  // =&gt; True
+s === S; // =&gt; False
+</code></p>
+
+<h2>Immutable Primitive Values and Mutable Object References</h2>
+
+<p>There is fundamental difference in JS between primitive values (undefined, booleans, numbers and strings) and objects (arrays and functions).</p>
+
+<p>two primitive values are equal iff their values are equal.
+two objects are equal if they are referencing to the same object.</p>
+
+<h2>Type Conversions</h2>
+
+<h2>Variable Declaration</h2>
+
+<h2>Variable Scope</h2>
+
+<p>block scope v.s. function scope: variables are visible within the function in which they are defined and within any functions that are nested within that function.</p>
+
+<p>Hoisting: variables are visible even before they are declared.</p>
+
+<p>For block scope: declare variables near their first use
+For function scope: declare variables at the beginnning</p>
+
+<p>Scope Chain: JavaScript is a <em>lexically scoped</em> language: the scope of a variable can be thought of as the set of source code lines for which the variable is defined. Every chunk of JS code (global code or functions) has a scope chain associated with it. This scope chian is a list or chain of objects that defines the variables that are &quot;in scope&quot; for that code.
+It is important to understand how this chain of objects is created. When a function is defined, it stores the scope chain then in effect. When that function is invoked, it creates a new object to store its local variables, and adds that new object to the stored scope chain to create a new, longer, chain that represents the scope for that function invocation. This becomes more interesting for nested functions because each time the outer function is called, the inner function is defined again. Since the scope chain dffers on each invocation of the outer function, the inner function will be subtly different each time it is defined - the scope of the inner function wil be identical on each invocation of the outer function, but the scope chain associated with that code will be different. The notion of a scope chain is helpful for understanding the <strong>with</strong> statement and <strong>closures</strong>.</p>
+
+
+            <div>If you have anything to comment on the above post, please leave me a message :)</div>
+			</div>
+            </paper-material>
+
+		</div>
+        
+        
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES * * */
+                var disqus_shortname = 'innercircle2015';
+                
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        
+
+        <footer>&copy Elkan Wang, 2015</footer>
+
+    </body>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Font -->
+    <link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'YOUR CODE GENERATED BY GOOGLE', 'auto');
+      ga('send', 'pageview');
+    </script>
+</html>

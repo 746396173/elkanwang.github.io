@@ -1,30 +1,41 @@
 @-webkit-keyframes rotateNav {
   0% {
-    transform: none; }
+    -webkit-transform: none;
+            transform: none; }
   25% {
-    transform: rotate3d(1, 0, -1, 15deg); }
+    -webkit-transform: rotate3d(1, 0, -1, 15deg);
+            transform: rotate3d(1, 0, -1, 15deg); }
   75% {
-    transform: rotate3d(1, 0, -1, -15deg); }
+    -webkit-transform: rotate3d(1, 0, -1, -15deg);
+            transform: rotate3d(1, 0, -1, -15deg); }
   100% {
-    transform: none; } }
+    -webkit-transform: none;
+            transform: none; } }
 @keyframes rotateNav {
   0% {
-    transform: none; }
+    -webkit-transform: none;
+            transform: none; }
   25% {
-    transform: rotate3d(1, 0, -1, 15deg); }
+    -webkit-transform: rotate3d(1, 0, -1, 15deg);
+            transform: rotate3d(1, 0, -1, 15deg); }
   75% {
-    transform: rotate3d(1, 0, -1, -15deg); }
+    -webkit-transform: rotate3d(1, 0, -1, -15deg);
+            transform: rotate3d(1, 0, -1, -15deg); }
   100% {
-    transform: none; } }
+    -webkit-transform: none;
+            transform: none; } }
 @-webkit-keyframes rotateIcon {
   0% {
-    transform: none; }
+    -webkit-transform: none;
+            transform: none; }
   50% {
-    transform: rotate(180deg); }
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
   100% {
-    transform: rotate(360deg); } }
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 body {
-  font-family: "freight-text-pro", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "Open Sans", sans-serif;
   color: black; }
 
 body {
@@ -47,7 +58,7 @@ a.foo {
   height: 100px;
   padding: 5px 10px;
   background: #9c3;
-  transition: background .3s ease, color 0.2s linear; }
+  /*transition: background .3s ease, color 0.2s linear;*/ }
   a.foo:hover, a.foo:focus {
     color: #030; }
 
@@ -57,18 +68,6 @@ a.foo {
   margin: 5% auto; }
   .block .title {
     padding: 10px; }
-
-footer {
-  padding-bottom: 20px; }
-
-.loader {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background: url("../img/loader.gif") 50% 50% no-repeat #f9f9f9; }
 
 /* Have to set height explicity on ui-view 
 to prevent collapsing during animation*/
@@ -137,48 +136,13 @@ to prevent collapsing during animation*/
 .wrap ul.wrap-nav ul li a:hover {
   color: #1a1a1a; }
 
-@media screen and (max-width: 60em) {
-  .navbar {
-    display: none; }
-
-  .menu {
-    left: 10px;
-    top: 10px; }
-
-  .wrap ul.wrap-nav > li {
-    width: 100%;
-    padding: 20px 0;
-    border-bottom: 1px solid #575757; }
-
-  .wrap ul.wrap-nav {
-    padding: 30px 0px 0px; }
-    .wrap ul.wrap-nav li a {
-      letter-spacing: 3px; }
-
-  nav ul {
-    opacity: 0;
-    visibility: hidden; }
-
-  .social {
-    color: #c1c1c1;
-    font-size: 25px;
-    padding: 15px 0; }
-
-  .social-icon {
-    width: 100%;
-    height: 50px;
-    background: #fff;
-    color: #333;
-    display: block;
-    margin: 5px 0; } }
 .navbar {
-  font-size: 150%;
+  font-size: 80%;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
   padding: 60px 0 0 30px;
   margin: 0px 20px;
-  transition: all .5s ease;
   margin-left: 0; }
   .navbar ul {
     display: inline-block;
@@ -250,6 +214,32 @@ to prevent collapsing during animation*/
     list-style-type: none;
     margin: 0px 10px; }
 
+@media screen and (max-width: 60em) {
+  .navbar {
+    display: none; }
+
+  .menu {
+    left: 10px;
+    top: 10px; }
+
+  .wrap ul.wrap-nav > li {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #575757; }
+
+  .wrap ul.wrap-nav {
+    padding: 30px 0px 0px; }
+    .wrap ul.wrap-nav li a {
+      letter-spacing: 3px; }
+
+  nav ul {
+    opacity: 0;
+    visibility: hidden; }
+
+  .social {
+    color: #c1c1c1;
+    font-size: 15px;
+    padding: 15px 0; } }
 .subject {
   background-color: #1b403d;
   margin: 10px 0px;
@@ -270,7 +260,21 @@ to prevent collapsing during animation*/
     display: table-cell;
     vertical-align: middle; }
 
+#name {
+  font-size: 6em;
+  text-transform: uppercase;
+  letter-spacing: 1em;
+  margin-left: 1em;
+  text-align: center; }
+
+@media screen and (max-width: 60em) {
+  #name {
+    margin-top: 30%;
+    font-size: 2em;
+    letter-spacing: 1em;
+    text-align: center; } }
 .social {
+  margin-top: 10em;
   text-align: center; }
   .social ul {
     display: inline-block;
@@ -279,12 +283,43 @@ to prevent collapsing during animation*/
     padding: 0; }
   .social li {
     float: left;
-    padding: 0 50px; }
+    padding: 0 30px; }
   .social li i {
     font-size: 1.5em; }
     .social li i:hover {
       color: #eee;
       transition-property: all .2s linear 0s; }
+
+#vps {
+  background-image: url("../img/vps.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+#ibm {
+  background-image: url("../img/ibm.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+#rbc {
+  background-image: url("../img/rbc.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+#achievers {
+  background-image: url("../img/achievers.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.logo {
+  float: left;
+  display: inline;
+  width: 30%;
+  margin: 0 10%;
+  color: transparent; }
 
 /*****************************************************************************/
 /*
@@ -568,32 +603,3 @@ paper-material {
 .highlight .gc {
   color: #999;
   background-color: #EAF2F5; }
-
-#profile paper-material {
-  height: 50vh;
-  width: 100%;
-  margin: 30px 0;
-  padding: 0;
-  vertical-align: middle;
-  display: table; }
-  #profile paper-material h1 {
-    display: table-cell;
-    vertical-align: middle; }
-
-.social {
-  text-align: center; }
-  .social ul {
-    display: inline-block;
-    list-style-type: none;
-    margin: 0;
-    padding: 0; }
-  .social li {
-    float: left;
-    padding: 0 50px; }
-  .social li i {
-    font-size: 1.5em; }
-    .social li i:hover {
-      color: #eee;
-      transition-property: all .2s linear 0s; }
-
-/*# sourceMappingURL=main.css.map */

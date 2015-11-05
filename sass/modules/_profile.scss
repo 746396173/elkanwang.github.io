@@ -1,3 +1,5 @@
+
+
 #profile {
     paper-material {
         height: 50vh;
@@ -14,7 +16,26 @@
     }
 }
 
+#name {
+    font-size: 6em;
+    text-transform: uppercase;
+    letter-spacing: 1em;
+    margin-left: 1em;
+    text-align: center;
+}
+
+@media screen and (max-width:60em) {
+
+#name {
+    margin-top: 30%;
+    font-size: 2em;
+    letter-spacing: 1em;
+    text-align: center;
+}
+}
+
 .social {
+    margin-top: 10em;
     text-align: center;
     ul {
         display: inline-block;
@@ -24,7 +45,7 @@
     }
     li {
         float: left;
-        padding: 0 50px;
+        padding: 0 30px;
     }
     li i {
         font-size: 1.5em;
@@ -34,3 +55,42 @@
         }
     }
 }
+
+
+#vps {
+    background-image: url("../img/vps.jpg");
+    background-size:     contain;                   
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+#ibm {
+    background-image: url("../img/ibm.gif");
+    background-size:     contain;              
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+#rbc {
+    background-image: url("../img/rbc.png");
+    background-size:     contain;               
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+#achievers {
+    background-image: url("../img/achievers.png");
+    background-size:     contain;        
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+.logo {
+    float: left;
+    display: inline;
+    width: 30%;
+    margin: 0 10%;
+    color: rgba(0, 0, 0, 0);
+}
+
+

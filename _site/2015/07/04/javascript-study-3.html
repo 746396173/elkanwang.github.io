@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Javascript Study - 3</title>
+        <meta name="viewport" content="width=device-width">
+        <!-- Polymer -->
+        <script src="/bower_components/webcomponentsjs/webcomponents.js"></script>
+        <link rel="import" href="/bower_components/polymer/polymer-mini.html">
+        <link rel="import" href="/bower_components/paper-material/paper-material.html">
+        <link rel="import" href="/bower_components/paper-fab/paper-fab.html">
+        <link rel="import" href="/bower_components/iron-icons/iron-icons.html">
+    </head>
+    <body>
+        <!--<paper-fab icon="add"><a href="/">Home</a></paper-fab> -->
+        <div id="post" class="block">
+
+			<h2 class="title">Javascript Study - 3</h2>
+
+            <paper-material>
+			<div class="post">
+			<h1>Objects</h1>
+
+<p>In addition to its name and value, each property has associated values that we&#39;ll call property attributes:</p>
+
+<ul>
+<li>The <em>writable</em> attribute specifies whether the value of the property can be set.</li>
+<li>The <em>enumerable</em> attribute specifies whether the property name is returned by a for/in loop.</li>
+<li>The <em>configurable</em> attribute specifies whether the property can be deleted and whether its attributes can be altered.</li>
+</ul>
+
+<p>In addition to its properties, every object has 3 associated <em>object attributes</em>:</p>
+
+<ul>
+<li><em>prototype</em> : a reference to another object from which properties are inherited.</li>
+<li><em>class</em> : a string that categorizes the type of an object.</li>
+<li><em>extensible</em> : flag specifies whether new properties may be added to the object.</li>
+</ul>
+
+<p>There are 3 categories of JavaScript objects and 2 types of properties:</p>
+
+<ul>
+<li><em>native object</em>: an object or class of objects defined by the ECMAScript specification. e.g. Arrays, functions, dates, and Regex.</li>
+<li><em>host object</em>: an object defined by the host environmnet (such as web browser) within which the JavaScript interpreter is embedded. Host objects may also be native objects, as when the host environment defines methods that are normal JavaScript Function objects.</li>
+<li><em>user-defined</em> : any object created by the execution of JavaScript code.</li>
+<li><em>own property</em> : property defined directly on an object.</li>
+<li><em>inherited property</em> : property defined by an object&#39;s prototype object.</li>
+</ul>
+
+<h2>Creating Objects</h2>
+
+<hr>
+
+<h3>Object Literals</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var empty = {};
+var point = { x:0, y:0 };
+</code></pre></div>
+<p>A single object literal can create many new objects.</p>
+
+<h3>Creating Objects with <strong>new</strong></h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var o = new Object();
+var a = new Array();
+var d = new Date();
+var r = new RegExp(&quot;js&quot;);
+</code></pre></div>
+<h3>Prototypes</h3>
+
+<p>property chain</p>
+
+<h3>Object.create()</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var o1 = Object.create({x:1, y:2});
+var o2 = Object.create(null);
+var o3 = Object.create(Object.prototype);
+</code></pre></div>
+<h2>Querying and Setting Properties</h2>
+
+<h2>Deleting Properties</h2>
+
+<h2>Testing Properties</h2>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var o = { x:1 };
+&quot;x&quot; in o;
+o.hasOwnProperty(&quot;x&quot;);
+o.propertyIsEnumerable(&quot;x&quot;);
+o.x !== undefined;
+</code></pre></div>
+<h2>Enumerating Properties</h2>
+
+<h2>Property Getters and Setters</h2>
+
+<h2>Property Attributes</h2>
+
+<h2>Object Attributes</h2>
+
+<h2>Serializing Objects</h2>
+<div class="highlight"><pre><code class="language-text" data-lang="text">JSON.stringify(o);
+JSON.parse(s);
+</code></pre></div>
+<hr>
+
+<h1>Arrays</h1>
+
+
+            <div>If you have anything to comment on the above post, please leave me a message :)</div>
+			</div>
+            </paper-material>
+
+		</div>
+        
+        
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES * * */
+                var disqus_shortname = 'innercircle2015';
+                
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        
+
+        <footer>&copy Elkan Wang, 2015</footer>
+
+    </body>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Font -->
+    <link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'YOUR CODE GENERATED BY GOOGLE', 'auto');
+      ga('send', 'pageview');
+    </script>
+</html>
