@@ -64,8 +64,7 @@ a.foo {
 
 /* block */
 .block {
-  padding: 20px;
-  margin: 5% auto; }
+  padding: 20px; }
   .block .title {
     padding: 10px; }
 
@@ -265,6 +264,7 @@ to prevent collapsing during animation*/
   text-transform: uppercase;
   letter-spacing: 1em;
   margin-left: 1em;
+  margin-top: 1em;
   text-align: center; }
 
 @media screen and (max-width: 60em) {
@@ -285,111 +285,58 @@ to prevent collapsing during animation*/
     float: left;
     padding: 0 30px; }
   .social li i {
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    padding: 3px;
+    border-bottom: white 2px solid; }
     .social li i:hover {
-      color: #eee;
-      transition-property: all .2s linear 0s; }
-
-#vps {
-  background-image: url("../img/vps.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center; }
-
-#ibm {
-  background-image: url("../img/ibm.gif");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center; }
-
-#rbc {
-  background-image: url("../img/rbc.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center; }
-
-#achievers {
-  background-image: url("../img/achievers.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center; }
-
-.logo {
-  float: left;
-  display: inline;
-  width: 30%;
-  margin: 0 10%;
-  color: transparent; }
+      border-color: black; }
 
 /*****************************************************************************/
 /*
 /* Sites
 /*
 /*****************************************************************************/
-.site {
-  padding: 5px;
-  margin: 10px 0px; }
+.blog_post {
+  text-align: center;
+  padding: 10px;
+  margin: 20px 0px;
+  clear: both;
+  list-style-type: none; }
+  .blog_post #date {
+    min-width: 150px;
+    border: black 1px solid;
+    float: left;
+    margin-right: 20px;
+    padding: 5px; }
+  .blog_post #title {
+    text-align: left;
+    padding: 5px; }
 
-li.site {
+.posts {
   list-style-type: none;
-  margin-left: -40px; }
+  margin: 0 22.5%; }
 
 /*****************************************************************************/
 /*
 /* Posts
 /*
 /*****************************************************************************/
-/* standard */
-.post pre {
-  background-color: white;
-  padding: 0 .4em; }
-
-.post ul, .post ol {
-  margin-left: 1.35em; }
-
-.post code {
-  padding: .2em;
-  color: black; }
-
-.post pre code {
-  border: none; }
-
-/* terminal */
-.post pre.terminal {
-  border: 1px solid #000;
-  background-color: #333;
-  color: #FFF; }
-
-.post blockquote {
-  border-left: 3px solid black; }
-
-.post pre.terminal code {
-  background-color: #333; }
-
-paper-material {
-  background-color: #eee;
-  margin: 5px;
-  padding: 15px; }
+#post {
+  padding: 8em; }
 
 .title {
-  margin: 0;
+  text-transform: uppercase;
+  letter-space: .1em;
+  margin: 2em auto;
   padding: 0;
-  width: 100%;
-  font-weight: 150%;
-  min-height: 20%;
+  width: 70%;
   text-align: center;
   vertical-align: center;
-  border-bottom: 2px solid black;
-  margin-bottom: 30px; }
-
-.posts paper-material {
-  background-color: #eee;
-  padding: 20px;
-  vertical-align: middle;
-  min-height: 40px; }
+  border-bottom: 1px solid black;
+  margin-bottom: 3em; }
 
 #disqus_thread {
-  margin: 0px 10px; }
+  margin: 2em 0em; }
 
 /*
  * GitHub style for Pygments syntax highlighter, for use with Jekyll
@@ -603,3 +550,46 @@ paper-material {
 .highlight .gc {
   color: #999;
   background-color: #EAF2F5; }
+
+.projects .project {
+  margin: 50px;
+  clear: both; }
+.projects .project_name {
+  width: 30%;
+  border-bottom: black 2px solid;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .2em; }
+.projects .project_content {
+  margin: 20px; }
+
+#vps {
+  background-image: url("../img/vps.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+#ibm {
+  background-image: url("../img/ibm.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+#rbc {
+  background-image: url("../img/rbc.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+#achievers {
+  background-image: url("../img/achievers.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.logo {
+  float: left;
+  display: inline;
+  width: 30%;
+  margin: 0 10%;
+  color: transparent; }
