@@ -86,47 +86,21 @@
     left:0; 
 	height:100%;
 	width:100%;
-	background:#eee;
+	background:white;
 	overflow:auto;
 	z-index:99;
 }
 
 .menu{
     position: absolute;
-    left: 5%;
-    top: 5%;
+    font-size: 3em;
     z-index: 999;
     a {
+    	display: none;
         text-decoration: none;
     }
 }
 
-.menu-open:after {
-	color:$menu-color;
-	content:"\f0c9";
-	font-family:"FontAwesome";
-    font-size: 2em;
-	transition-property:all .2s linear 0s;
-	-moz-transition:all .2s linear 0s;
-	-webkit-transition:all .2s linear 0s;
-	-o-transition:all .2s linear 0s;
-}
-.menu-open:hover:after {
-	color:lighten($menu-color, 60);
-}
-.menu-close:after {
-	color:$menu-color;
-	content:"\f00d";
-	font-family:"FontAwesome";
-    font-size:2em;
-	transition-property:all .2s linear 0s;
-	-moz-transition:all .2s linear 0s;
-	-webkit-transition:all .2s linear 0s;
-	-o-transition:all .2s linear 0s;
-}
-.menu-close:hover:after {
-	color: lighten($menu-color, 60);
-}
 #contact {
     text-align: center;
 
@@ -138,12 +112,16 @@
 }
 
 @media screen and (max-width:60em) {
+
     .navbar {
         display: none;
     }
     .menu {
-        left: 10px;
-        top: 10px;
+    	a {
+    		display: block;
+    	}
+        left: 2em;
+        top: 2em;
     }
 	.wrap ul.wrap-nav>li {
 		width:100%;
