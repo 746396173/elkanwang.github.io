@@ -1,11 +1,6 @@
 **/*.scssc
 **/*.map
-_sites/
 *.swp
-sass/
-svg
 
 # grunt related files
-Gruntfile.js
 node_modules/
-package.json

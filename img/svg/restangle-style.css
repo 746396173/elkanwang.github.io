@@ -1,0 +1,41 @@
+rect {
+    fill: url(#button-gradient);
+    filter: url(#drop-shadow);
+    stroke-width: 1px;
+    stroke: url(#button-border-gradient);
+}
+
+text {
+	fill: white;
+	fill-opacity: 0.9;
+	font-family: "Helvetica Neue", arial, sans-serif;
+	font-size: 50px;
+	filter: url(#drop-shadow);
+	text-anchor: middle;
+	pointer-events: none;
+}
+
+g#button { cursor: pointer; }
+
+circle {
+    fill: red;
+    fill-opacity: 0.5;
+}
+
+line {
+	stroke: blue;
+ 	stroke-width: 2%;
+	stroke-linecap: round;
+}
+
+polygon {
+	Fill: blue;
+	Stroke: black;
+	Stroke-width: 3;
+}
+
+polyline {
+	Fill: none;
+	Stroke: black;
+	Stroke-width: 20;
+}

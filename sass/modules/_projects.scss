@@ -1,0 +1,16 @@
+.projects {
+	.project {
+		margin: 50px;
+		clear: both;
+	}
+	.project_name {
+		width: 30%;
+    	border-bottom: black 2px solid;
+    	text-align: center;
+    	text-transform: uppercase;
+    	letter-spacing: .2em;
+	}
+	.project_content {
+		margin: 20px;
+	}
+}
