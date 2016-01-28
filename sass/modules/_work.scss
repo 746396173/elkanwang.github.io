@@ -1,35 +1,20 @@
-#vps {
-    background-image: url("../img/vps.jpg");
-    background-size:     contain;                   
-    background-repeat:   no-repeat;
-    background-position: center center;
-}
-
-#ibm {
-    background-image: url("../img/ibm.gif");
-    background-size:     contain;              
-    background-repeat:   no-repeat;
-    background-position: center center;
-}
-
-#rbc {
-    background-image: url("../img/rbc.png");
-    background-size:     contain;               
-    background-repeat:   no-repeat;
-    background-position: center center;
-}
-
-#achievers {
-    background-image: url("../img/achievers.png");
-    background-size:     contain;        
-    background-repeat:   no-repeat;
-    background-position: center center;
+.work {
+  padding: 20px;
+  text-align: center;
 }
 
 .logo {
-    float: left;
     display: inline;
-    width: 30%;
-    margin: 0 10%;
-    color: rgba(0, 0, 0, 0);
+    width: 200px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.description {
+  li{
+    list-style-type: none;
+  }
+  margin: 0 auto;
+  padding: 10px 0;
 }
