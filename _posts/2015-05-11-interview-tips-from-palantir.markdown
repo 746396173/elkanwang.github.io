@@ -7,7 +7,7 @@ comments: true
 ---
 
 
-##System Design
+## System Design
 
 - Concurrency: threads, deadlock, starvation, how to parallelize algoriths, consistency, coherence
 - Networking: IPC, TCP/IP, difference between throughput and latency
@@ -16,7 +16,7 @@ comments: true
 - Estimation
 - Availability and Reliability: how things can fail in distributed environment, how to design a system to cope with network failures, durability
 
-####How to Prepare for the Interview
+#### How to Prepare for the Interview
 - Do mock design sessions
 - Work on an actual system
 - Do back-of-the-envelope calculations for something you are building and then write micro-benchmarks to verify them
@@ -29,7 +29,7 @@ comments: true
 - Readable, maintainable and extensible
 - Debugging ability, problem-solving and analytical skills, creativity, and an understanding of the ecosystem that surrounds production code
 
-####Suggestions
+#### Suggestions
 1. Before you start coding
 	- Make sure you understand the problem. Clarify all the requirements with interviewers
 	- Work through simple examples. It may help you recognize additional cases and patterns
@@ -53,7 +53,7 @@ Some books that are recommended:
 - Design Patterns: Elements of Reusable Object-Oriented Software
 
 
-##Algorithms Interview
+## Algorithms Interview
 
 An algorithm design question usually goes like "Gieven X, figure out an efficient way to do Y".
 
@@ -83,7 +83,7 @@ Now it comes to the difficult part, optimization. To improve the algorithm.
 
 
 
-####References
+#### References
 [How to ace a system design interview](https://www.palantir.com/2011/10/how-to-ace-a-systems-design-interview/)    
 [The coding interview](https://www.palantir.com/2011/10/the-coding-interview/)    
 [How to ace an algorithm interview](https://www.palantir.com/2011/09/how-to-ace-an-algorithms-interview/)    

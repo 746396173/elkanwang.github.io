@@ -155,7 +155,6 @@ For function scope: declare variables at the beginnning</p>
 It is important to understand how this chain of objects is created. When a function is defined, it stores the scope chain then in effect. When that function is invoked, it creates a new object to store its local variables, and adds that new object to the stored scope chain to create a new, longer, chain that represents the scope for that function invocation. This becomes more interesting for nested functions because each time the outer function is called, the inner function is defined again. Since the scope chain dffers on each invocation of the outer function, the inner function will be subtly different each time it is defined - the scope of the inner function wil be identical on each invocation of the outer function, but the scope chain associated with that code will be different. The notion of a scope chain is helpful for understanding the <strong>with</strong> statement and <strong>closures</strong>.</p>
 
 
-            <div>If you have anything to comment on the above post, please leave me a message :)</div>
 			</div>
 
 
