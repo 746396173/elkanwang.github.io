@@ -5,26 +5,26 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Leetcode Solution: Binary Search Iterator</title>
         <meta name="viewport" content="width=device-width">
+        <script src="../../../scripts/prism.js"></script>
     </head>
     <body>
         <!--<paper-fab icon="add"><a href="/">Home</a></paper-fab> -->
         <div id="post" >
-
+          <div><a href="../../../#blog"><button>Back</button></a><div>
 			<h2 class="title">Leetcode Solution: Binary Search Iterator</h2>
-            <div><a href="../../../#blog">Back</a><div>
 
 			<div class="post">
-			<h3>Initialization</h3>
+			<h3 id="initialization">Initialization</h3>
 
 <p>Initializing a binary search iterator, to create a stack to store all the most left nodes.</p>
 
-<h3>hasNext</h3>
+<h3 id="hasnext">hasNext</h3>
 
 <p>When asking if there is a next smallest number, we can just ask for if the stack that we built is empty.<br>
 If it&#39;s empty, then there is no more numbers.<br>
 If it isn&#39;t, then we can find the next smallest number</p>
 
-<h3>next</h3>
+<h3 id="next">next</h3>
 
 <p>When asking for the next smallest number, the next smallest number is the last thing inserted into the stack. So pop the stack, <code>node = self.stack.pop()</code> , to get the next smallest number.<br>
 But also, we take a subtree rooted at the right child of the node. And keep all the left most nodes of the subtree into our stack. This way, we are able to scanning the binary tree and always output the next smallest number.</p>
@@ -67,14 +67,14 @@ But also, we take a subtree rooted at the right child of the node. And keep all 
             <div>If you have anything to comment on the above post, please leave me a message :)</div>
 			</div>
 
-		
-        
+
+
         
             <div id="disqus_thread"></div>
             <script type="text/javascript">
                 /* * * CONFIGURATION VARIABLES * * */
                 var disqus_shortname = 'innercircle2015';
-                
+
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -91,8 +91,8 @@ But also, we take a subtree rooted at the right child of the node. And keep all 
     </body>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
+    <!-- <link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link> -->
     <!-- Font -->
     <link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
 

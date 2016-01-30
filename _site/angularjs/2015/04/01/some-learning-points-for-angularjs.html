@@ -5,28 +5,26 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Some Learning Points for AngularJS</title>
         <meta name="viewport" content="width=device-width">
+        <script src="../../../scripts/prism.js"></script>
     </head>
     <body>
         <!--<paper-fab icon="add"><a href="/">Home</a></paper-fab> -->
         <div id="post" >
-
+          <div><a href="../../../#blog"><button>Back</button></a><div>
 			<h2 class="title">Some Learning Points for AngularJS</h2>
-            <div><a href="../../../#blog">Back</a><div>
 
 			<div class="post">
 			<p>AngularJS is one of the most popular front-end javascript framework at this time. It is great to be used to develop a single page web application. It extends HTML attributes with <strong>Directives</strong>, and binds data to HTML with <strong>Expressions</strong>. It&#39;s well-known for its <strong>&quot;Data Binding&quot;</strong>.  </p>
 
 <hr>
 
-<h2>ng-directives</h2>
+<h2 id="ng-directives">ng-directives</h2>
 
-<h4>ng-app</h4>
+<p>####ng-app
+The directive defines an AngularJS aplication</p>
 
-<p>The directive defines an AngularJS aplication</p>
-
-<h4>ng-model</h4>
-
-<p>The directive binds the value of HTML controls (input, select, textarea, etc.) to application data. It can be useful in:  </p>
+<p>####ng-model
+The directive binds the value of HTML controls (input, select, textarea, etc.) to application data. It can be useful in:  </p>
 
 <ul>
 <li>Provide type validation for application data</li>
@@ -35,33 +33,28 @@
 <li>Bind HTML elements to HTML forms</li>
 </ul>
 
-<h4>ng-bind</h4>
-
-<p>The directive binds application data to the HTML view</p>
+<p>####ng-bind
+The directive binds application data to the HTML view</p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">ng-app=</span><span class="s">&quot;my-app&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;p&gt;&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">ng-model=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;&lt;/p&gt;</span>
     <span class="nt">&lt;p</span> <span class="na">ng-bind=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;&lt;/p&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre></div>
-<h3>More</h3>
-
-<h4>ng-init</h4>
-
-<p>The directive that initializes AngularJS application variable. However, this is uncommon. It is a better prace to initialize variables in controllers.</p>
-
-<h4>ng-repeat</h4>
-
-<p>The directive that repeats an HTML element: <code>ng-repeat= &quot;name in names&quot;</code></p>
+<p>###More
+####ng-init
+The directive that initializes AngularJS application variable. However, this is uncommon. It is a better prace to initialize variables in controllers.
+####ng-repeat
+The directive that repeats an HTML element: <code>ng-repeat= &quot;name in names&quot;</code></p>
 
 <hr>
 
-<h2>AngularJS Expressions</h2>
+<h2 id="angularjs-expressions">AngularJS Expressions</h2>
 
 <p>The AngularJS Expressions are written in double brackets: <code>{5+5}</code>, <code>{ { name } }</code></p>
 
 <hr>
 
-<h2>Angular Applications</h2>
+<h2 id="angular-applications">Angular Applications</h2>
 
 <p>AngularJS modules define applications, controllers control applications   </p>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">ng-app=</span><span class="s">&quot;myApp&quot;</span> <span class="na">ng-controller=</span><span class="s">&quot;myCtrl&quot;</span><span class="nt">&gt;</span>
@@ -79,18 +72,15 @@
     <span class="p">});</span>
 <span class="nt">&lt;/script&gt;</span> 
 </code></pre></div>
-<h3>AngularJS Controllers</h3>
-
-<p>AngularJS applications are controlled by controllers. And controllers are defined by <strong>ng-control</strong>.<br>
+<p>###AngularJS Controllers
+AngularJS applications are controlled by controllers. And controllers are defined by <strong>ng-control</strong>.<br>
 AngularJS controller is an JavaScript object. An example is provided above.</p>
 
 <hr>
 
-<h3>More AngularJS Features</h3>
-
-<h4>AngularJS Filters</h4>
-
-<p>Filters can be added to <strong>expressions</strong> and <strong>directives</strong> by using a pipe character <code>|</code>.  </p>
+<p>###More AngularJS Features
+####AngularJS Filters
+Filters can be added to <strong>expressions</strong> and <strong>directives</strong> by using a pipe character <code>|</code>.  </p>
 
 <ul>
 <li>uppercase:  <code>{ { lastName | uppercase } }</code></li>
@@ -99,33 +89,29 @@ AngularJS controller is an JavaScript object. An example is provided above.</p>
 <li>in directives: <code>ng-repeat = &quot; name in names | orderBy:&#39;country&#39; &quot;</code></li>
 </ul>
 
-<h4>AngularJS XMLHttpRequest</h4>
-
-<p>This allows you to obtain data from remote server.</p>
+<p>####AngularJS XMLHttpRequest
+This allows you to obtain data from remote server.</p>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;myApp&#39;</span><span class="p">,</span> <span class="p">[]);</span>
 <span class="nx">app</span><span class="p">.</span><span class="nx">controller</span><span class="p">(</span><span class="s1">&#39;customersCtrl&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$scope</span><span class="p">,</span> <span class="nx">$http</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">$http</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;http://www.w3schools.com/angular/customers.php&quot;</span><span class="p">)</span>
     <span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span><span class="nx">$scope</span><span class="p">.</span><span class="nx">names</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">records</span><span class="p">;});</span>
 <span class="p">});</span>
 </code></pre></div>
-<h4>Resources:</h4>
-
-<ul>
-<li><a href="http://www.w3schools.com/angular/angular_directives.asp">w3schools</a></li>
-</ul>
+<p>####Resources:
+* <a href="http://www.w3schools.com/angular/angular_directives.asp">w3schools</a></p>
 
 
             <div>If you have anything to comment on the above post, please leave me a message :)</div>
 			</div>
 
-		
-        
+
+
         
             <div id="disqus_thread"></div>
             <script type="text/javascript">
                 /* * * CONFIGURATION VARIABLES * * */
                 var disqus_shortname = 'innercircle2015';
-                
+
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -142,8 +128,8 @@ AngularJS controller is an JavaScript object. An example is provided above.</p>
     </body>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
+    <!-- <link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link> -->
     <!-- Font -->
     <link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
 

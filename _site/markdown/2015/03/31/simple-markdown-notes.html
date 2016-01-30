@@ -5,50 +5,62 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Basic Markdown Notes</title>
         <meta name="viewport" content="width=device-width">
+        <script src="../../../scripts/prism.js"></script>
     </head>
     <body>
         <!--<paper-fab icon="add"><a href="/">Home</a></paper-fab> -->
         <div id="post" >
-
+          <div><a href="../../../#blog"><button>Back</button></a><div>
 			<h2 class="title">Basic Markdown Notes</h2>
-            <div><a href="../../../#blog">Back</a><div>
 
 			<div class="post">
-			<h3>Headers</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text"># H1
-## H2
-### H3
+			<p>###Headers
+```</p>
+
+<h1 id="h1">H1</h1>
+
+<h2 id="h2">H2</h2>
+
+<h3 id="h3">H3</h3>
+<div class="highlight"><pre><code class="language-text" data-lang="text">###Font Styles
+*This is italic*  
+**This is bold**   
+~~This is strikethrough~~
+
+###Blockquotes
+
+&gt;Blockquotes can be very useful in making documents clearer
+
+###Tables
 </code></pre></div>
-<h3>Font Styles</h3>
-
-<p><em>This is italic</em><br>
-<strong>This is bold</strong><br>
-~~This is strikethrough~~</p>
-
-<h3>Blockquotes</h3>
-
-<blockquote>
-<p>Blockquotes can be very useful in making documents clearer</p>
-</blockquote>
-
-<h3>Tables</h3>
+<table><thead>
+<tr>
+<th>Column1</th>
+<th>Column2</th>
+<th>Column3</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Content1</td>
+<td>Content2</td>
+<td>Content3</td>
+</tr>
+</tbody></table>
 <div class="highlight"><pre><code class="language-text" data-lang="text">Column1 | Column2 | Column3
 ----- | ---- | ----
 Content1 | Content2 | Content3
-</code></pre></div>
-<p>Column1 | Column2 | Column3
------ | ---- | ----
-Content1 | Content2 | Content3</p>
 
-<h3>Lists</h3>
-<div class="highlight"><pre><code class="language-text" data-lang="text">* This is an un-ordered list
-    * Different hierachies
+
+###Lists
 </code></pre></div>
 <ul>
 <li>This is an un-ordered list
 
 <ul>
-<li>Different hierachies</li>
+<li>Different hierachies
+```
+* This is an un-ordered list
+* Different hierachies</li>
 </ul></li>
 </ul>
 <div class="highlight"><pre><code class="language-text" data-lang="text">- This is an un-ordered list too
@@ -74,50 +86,45 @@ Content1 | Content2 | Content3</p>
 </ol></li>
 </ol>
 
-<h3>Task lists</h3>
+<p>###Task lists</p>
 
 <ul>
 <li>[x] this is a complete item</li>
 <li>[ ] this is an incomplete item</li>
 </ul>
 
-<h3>Code and Syntax Highlighting</h3>
+<p>###Code and Syntax Highlighting</p>
 
-<h4>Inline Code</h4>
-
-<p>You can embed <code>inline code</code> like this.</p>
-
-<h4>Block of code</h4>
-
-<p>And you can have block of code like this:</p>
+<p>####Inline Code
+You can embed <code>inline code</code> like this.
+####Block of code
+And you can have block of code like this:</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">This is a block of code
 </code></pre></div>
 <p>And...of course, code highlighting</p>
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="s2">&quot;javascript&quot;</span><span class="p">;</span>
 <span class="nx">alert</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span>
 </code></pre></div>
-<h3>And ... emojis</h3>
-
-<p>:boom</p>
+<p>###And ... emojis
+:boom</p>
 
 <hr>
 
-<h4>Some useful documents:</h4>
-
-<p><a href="http://stationinthemetro.com/wp-content/uploads/2013/04/Markdown_Cheat_Sheet_v1-1.pdf">cheatsheet</a></p>
+<p>####Some useful documents:
+<a href="http://stationinthemetro.com/wp-content/uploads/2013/04/Markdown_Cheat_Sheet_v1-1.pdf">cheatsheet</a></p>
 
 
             <div>If you have anything to comment on the above post, please leave me a message :)</div>
 			</div>
 
-		
-        
+
+
         
             <div id="disqus_thread"></div>
             <script type="text/javascript">
                 /* * * CONFIGURATION VARIABLES * * */
                 var disqus_shortname = 'innercircle2015';
-                
+
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -134,8 +141,8 @@ Content1 | Content2 | Content3</p>
     </body>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
+    <!-- <link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link> -->
     <!-- Font -->
     <link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
 

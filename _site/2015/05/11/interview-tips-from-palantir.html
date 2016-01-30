@@ -5,16 +5,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Interview Tips From Palantir</title>
         <meta name="viewport" content="width=device-width">
+        <script src="../../../scripts/prism.js"></script>
     </head>
     <body>
         <!--<paper-fab icon="add"><a href="/">Home</a></paper-fab> -->
         <div id="post" >
-
+          <div><a href="../../../#blog"><button>Back</button></a><div>
 			<h2 class="title">Interview Tips From Palantir</h2>
-            <div><a href="../../../#blog">Back</a><div>
 
 			<div class="post">
-			<h2>System Design</h2>
+			<p>##System Design</p>
 
 <ul>
 <li>Concurrency: threads, deadlock, starvation, how to parallelize algoriths, consistency, coherence</li>
@@ -25,52 +25,34 @@
 <li>Availability and Reliability: how things can fail in distributed environment, how to design a system to cope with network failures, durability</li>
 </ul>
 
-<h4>How to Prepare for the Interview</h4>
+<p>####How to Prepare for the Interview
+- Do mock design sessions
+- Work on an actual system
+- Do back-of-the-envelope calculations for something you are building and then write micro-benchmarks to verify them
+- Study open source projects (Dig into the performace characteristics of an open source system)
+- Learn how databases and operating systems work</p>
 
-<ul>
-<li>Do mock design sessions</li>
-<li>Work on an actual system</li>
-<li>Do back-of-the-envelope calculations for something you are building and then write micro-benchmarks to verify them</li>
-<li>Study open source projects (Dig into the performace characteristics of an open source system)</li>
-<li>Learn how databases and operating systems work</li>
-</ul>
+<p>##Coding Interview</p>
 
-<h2>Coding Interview</h2>
+<p>####Clean and correct code
+- Readable, maintainable and extensible
+- Debugging ability, problem-solving and analytical skills, creativity, and an understanding of the ecosystem that surrounds production code</p>
 
-<h4>Clean and correct code</h4>
-
-<ul>
-<li>Readable, maintainable and extensible</li>
-<li>Debugging ability, problem-solving and analytical skills, creativity, and an understanding of the ecosystem that surrounds production code</li>
-</ul>
-
-<h4>Suggestions</h4>
-
-<ol>
-<li>Before you start coding
-
-<ul>
-<li>Make sure you understand the problem. Clarify all the requirements with interviewers</li>
-<li>Work through simple examples. It may help you recognize additional cases and patterns</li>
-<li>Make a plan. Think about program&#39;s high-level structure</li>
-<li>Choose your language. C++/Java/pseudo-code</li>
-</ul></li>
-<li>While coding
-
-<ul>
-<li>Think out loud. Explain your thought process</li>
-<li>Break the problem down and define abstractions.</li>
-<li>Delay the implementation of your helper functions. Write down the signature. 1) It shows that you are familiar with abstractions; 2) It allows you to maintain momentum towards the overall solution; 3) It results in fewer context-switches for your brain; 4) Your interviewer may grant you the implementation for free</li>
-<li>Don&#39;t get caught up in trivialities</li>
-</ul></li>
-<li>Once you have a solution
-
-<ul>
-<li>Think about edge cases</li>
-<li>Step through your code</li>
-<li>Explain the shortcuts you took</li>
-</ul></li>
-</ol>
+<p>####Suggestions
+1. Before you start coding
+    - Make sure you understand the problem. Clarify all the requirements with interviewers
+    - Work through simple examples. It may help you recognize additional cases and patterns
+    - Make a plan. Think about program&#39;s high-level structure
+    - Choose your language. C++/Java/pseudo-code
+2. While coding
+    - Think out loud. Explain your thought process
+    - Break the problem down and define abstractions.
+    - Delay the implementation of your helper functions. Write down the signature. 1) It shows that you are familiar with abstractions; 2) It allows you to maintain momentum towards the overall solution; 3) It results in fewer context-switches for your brain; 4) Your interviewer may grant you the implementation for free
+    - Don&#39;t get caught up in trivialities
+3. Once you have a solution
+    - Think about edge cases
+    - Step through your code
+    - Explain the shortcuts you took</p>
 
 <p>Some books that are recommended:</p>
 
@@ -81,7 +63,7 @@
 <li>Design Patterns: Elements of Reusable Object-Oriented Software</li>
 </ul>
 
-<h2>Algorithms Interview</h2>
+<p>##Algorithms Interview</p>
 
 <p>An algorithm design question usually goes like &quot;Gieven X, figure out an efficient way to do Y&quot;.</p>
 
@@ -117,9 +99,8 @@
 <li>Don&#39;t be afraid to backtrack</li>
 </ul>
 
-<h4>References</h4>
-
-<p><a href="https://www.palantir.com/2011/10/how-to-ace-a-systems-design-interview/">How to ace a system design interview</a><br>
+<p>####References
+<a href="https://www.palantir.com/2011/10/how-to-ace-a-systems-design-interview/">How to ace a system design interview</a><br>
 <a href="https://www.palantir.com/2011/10/the-coding-interview/">The coding interview</a><br>
 <a href="https://www.palantir.com/2011/09/how-to-ace-an-algorithms-interview/">How to ace an algorithm interview</a><br>
 and you can see more useful posts from <a href="https://www.palantir.com/category/blogs/">Palantir blog</a></p>
@@ -128,14 +109,14 @@ and you can see more useful posts from <a href="https://www.palantir.com/categor
             <div>If you have anything to comment on the above post, please leave me a message :)</div>
 			</div>
 
-		
-        
+
+
         
             <div id="disqus_thread"></div>
             <script type="text/javascript">
                 /* * * CONFIGURATION VARIABLES * * */
                 var disqus_shortname = 'innercircle2015';
-                
+
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -152,8 +133,8 @@ and you can see more useful posts from <a href="https://www.palantir.com/categor
     </body>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
+    <!-- <link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link> -->
     <!-- Font -->
     <link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
 

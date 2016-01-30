@@ -5,20 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Javascript Study - 2</title>
         <meta name="viewport" content="width=device-width">
+        <script src="../../../scripts/prism.js"></script>
     </head>
     <body>
         <!--<paper-fab icon="add"><a href="/">Home</a></paper-fab> -->
         <div id="post" >
-
+          <div><a href="../../../#blog"><button>Back</button></a><div>
 			<h2 class="title">Javascript Study - 2</h2>
-            <div><a href="../../../#blog">Back</a><div>
 
 			<div class="post">
-			<h1>Expressions and Operators</h1>
+			<h1 id="expressions-and-operators">Expressions and Operators</h1>
 
 <p>An <em>expression</em> is a phrase of JavaScript that a JavaScript interpreter can <em>evaluate</em> to produce a value. </p>
 
-<h2>Primary Expression</h2>
+<h2 id="primary-expression">Primary Expression</h2>
 
 <ul>
 <li>Constant values</li>
@@ -42,7 +42,7 @@ this  // Evaluate to the &quot;current&quot; object
 sum
 undefined // undefined is a global variable, not a keyword like *null*
 </code></pre></div>
-<h2>Object and Array Initializers</h2>
+<h2 id="object-and-array-initializers">Object and Array Initializers</h2>
 
 <p>Also known as &quot;object literals&quot; and &quot;array literals&quot;.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">var a = [];
@@ -52,16 +52,16 @@ var sparseArray = [1,,,,5];
 
 var p = { x:2.3, y:-1.3 };
 </code></pre></div>
-<h2>Function Definition Expressions</h2>
+<h2 id="function-definition-expressions">Function Definition Expressions</h2>
 
 <p>A function definition expression is a &quot;function literal&quot;.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">var square = function(x) { return x*x; };
 </code></pre></div>
-<h2>Property Access Expressions</h2>
+<h2 id="property-access-expressions">Property Access Expressions</h2>
 <div class="highlight"><pre><code class="language-text" data-lang="text">expression . identifier
 expression [ expression ]
 </code></pre></div>
-<h2>Invocation Expressions</h2>
+<h2 id="invocation-expressions">Invocation Expressions</h2>
 
 <p>An <em>invocation expression</em> is JavaScript&#39;s syntax for executing a function or method.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">f(0);
@@ -79,7 +79,7 @@ a.sort();
 
 <p>Invocation expressions that are not method invocations use the global object or undefined as the value of <strong>this</strong> keyword.</p>
 
-<h2>Object Creation Expression</h2>
+<h2 id="object-creation-expression">Object Creation Expression</h2>
 
 <p>An <em>object creation expression</em> creates a new object and invokes a function (constructor) to initialize the properties of that object.</p>
 <div class="highlight"><pre><code class="language-text" data-lang="text">new Object()
@@ -87,19 +87,19 @@ new Point(2,3)
 new Object
 new Date
 </code></pre></div>
-<h2>eval()</h2>
+<h2 id="eval">eval()</h2>
 
-<h2>void</h2>
+<h2 id="void">void</h2>
 
-<h1>Statements</h1>
+<h1 id="statements">Statements</h1>
 
-<h2>Expression statements</h2>
+<h2 id="expression-statements">Expression statements</h2>
 
-<h2>Compound and Empty Statements</h2>
+<h2 id="compound-and-empty-statements">Compound and Empty Statements</h2>
 
-<h2>Declaration Statements</h2>
+<h2 id="declaration-statements">Declaration Statements</h2>
 
-<h2>Miscellaneous Statements</h2>
+<h2 id="miscellaneous-statements">Miscellaneous Statements</h2>
 
 <ul>
 <li>with</li>
@@ -165,14 +165,14 @@ f.email.value = &quot;&quot;;
             <div>If you have anything to comment on the above post, please leave me a message :)</div>
 			</div>
 
-		
-        
+
+
         
             <div id="disqus_thread"></div>
             <script type="text/javascript">
                 /* * * CONFIGURATION VARIABLES * * */
                 var disqus_shortname = 'innercircle2015';
-                
+
                 /* * * DON'T EDIT BELOW THIS LINE * * */
                 (function() {
                     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -189,8 +189,8 @@ f.email.value = &quot;&quot;;
     </body>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
+    <!-- <link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link> -->
     <!-- Font -->
     <link href='http://fonts.googleapis.com/css?family=Metrophobic' rel='stylesheet' type='text/css'>
 

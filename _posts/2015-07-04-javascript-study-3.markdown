@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title:  "Javascript Study - 3"
 date:   2015-07-04  
@@ -33,21 +33,21 @@ There are 3 categories of JavaScript objects and 2 types of properties:
 
 ### Object Literals
 
-```
+{% highlight javascript %}
 var empty = {};
 var point = { x:0, y:0 };
-```
+{% endhighlight %}
 
 A single object literal can create many new objects.
 
 ### Creating Objects with **new**
 
-```
+{% highlight javascript %}
 var o = new Object();
 var a = new Array();
 var d = new Date();
 var r = new RegExp("js");
-```
+{% endhighlight %}
 
 ### Prototypes
 
@@ -55,11 +55,12 @@ property chain
 
 ### Object.create()
 
-```
+
+{% highlight javascript %}
 var o1 = Object.create({x:1, y:2});
 var o2 = Object.create(null);
 var o3 = Object.create(Object.prototype);
-```
+{% endhighlight %}
 
 ## Querying and Setting Properties
 
@@ -67,31 +68,30 @@ var o3 = Object.create(Object.prototype);
 
 ## Testing Properties
 
-```
+{% highlight javascript linenos%}
 var o = { x:1 };
 "x" in o;
 o.hasOwnProperty("x");
 o.propertyIsEnumerable("x");
 o.x !== undefined;
-```
+{% endhighlight %}
 
 ## Enumerating Properties
-
+-----
 ## Property Getters and Setters
-
+-----
 ## Property Attributes
+-----
 
 ## Object Attributes
+-----
 
 ## Serializing Objects
 
-```
+{% highlight javascript %}
 JSON.stringify(o);
 JSON.parse(s);
-```
-
+{% endhighlight %}
 -----
 
-# Arrays
-
-
+## Arrays
