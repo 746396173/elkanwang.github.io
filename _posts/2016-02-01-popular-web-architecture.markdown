@@ -42,7 +42,7 @@ Nginx（lua or c）-----
 集群的好处显而易见，但是有一个弊端就是单节点进行调度，如果节点出现故障，则整个集群全部都无法服务，对此的解决方案，我们使用keepalived来解决。[Keepalived for Linux](http://www.keepalived.org/)   keepalived是基于VRRP协议（[VRRP协议介绍](http://blog.chinaunix.net/uid-127037-id-2919520.html)）的，请一定先了解VRRP协议后再进行配置。     keepalived可以把多台设备虚拟出一个IP，并自动在故障节点与备用节点之间实现failover切换。这样我们配置两台货多台lvs调度节点，然后配置好keepalived就可以做到lvs调度节点出现故障后，自动切换到备用调度节点。（同样适用于mysql）
 
 
-####memcache集群扩展解决：
+#### memcache集群扩展解决：
 memcache因为我们一般采用的都是hash后除以节点数取余，然后分配到对应节点上，如果节点数出现变化，以前的缓存数据将基本都不能命中。   
 解决方法：consistent hashing   
 简介：[一致性哈希](http://baike.baidu.com/view/1588037.htm)
