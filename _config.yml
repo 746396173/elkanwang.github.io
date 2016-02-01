@@ -2,7 +2,7 @@ name: Jacob
 
 markdown: kramdown
 
-highlighter: pygments
+highlighter: rouge
 baseurl: /
 encoding: utf-8
 gems:
