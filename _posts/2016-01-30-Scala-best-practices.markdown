@@ -9,6 +9,7 @@ comments: true
 
 在学习的过程中发现了对许多的概念都非常不清楚，所以在这里先做一个Todo list，回来要把所有没清楚的搞清楚。
 
+
 - [ ] Variance
 - [ ] Monad
 - [ ] Type alias
@@ -20,5 +21,5 @@ comments: true
 ## 格式
 这个不用多说了，不管是写Scala还是C++还是Python，格式都非常重要，推荐看《Clean Code》这本书。
 
-   
+
 To be continued
