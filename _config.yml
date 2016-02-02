@@ -6,6 +6,4 @@ highlighter: rouge
 baseurl: /
 encoding: utf-8
 gems:
-  - redcarpet
   - jekyll-gist
-  - pygments.rb
