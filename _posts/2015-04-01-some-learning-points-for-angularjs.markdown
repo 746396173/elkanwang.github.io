@@ -66,7 +66,7 @@ AngularJS modules define applications, controllers control applications
 	    $scope.firstName= "John";
 	    $scope.lastName= "Doe";
 	});
-</script> 
+</script>
 ```
 
 ###AngularJS Controllers

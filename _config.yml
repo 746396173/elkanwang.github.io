@@ -1,9 +1,13 @@
 name: Jacob
 
 markdown: kramdown
-input: GFM
-highlighter: rouge
-baseurl: /
-encoding: utf-8
-gems:
-  - jekyll-gist
+kramdown:
+     input: GFM
+     syntax_highlighter: rouge
+
+# baseurl: /
+# encoding: utf-8
+# gems:
+#   - jekyll-gist
+# set :markdown_engine, :kramdown
+# activate: rouge_syntax

@@ -18,9 +18,10 @@ Basically there are these few cases:
 In this case, we can use a list to keep track of all the numbers
 
 The solution:
-{% highlight python linenos %}
-class Solution:
 
+
+~~~ python
+class Solution:
     def isHappy(self, n):
         '''
         determine if an integer is happy
@@ -56,4 +57,4 @@ class Solution:
 sol = Solution()
 print sol.isHappy(13)
 # prints True
-{% endhighlight %}
+~~~
