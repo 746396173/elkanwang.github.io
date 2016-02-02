@@ -1,7 +1,7 @@
 name: Jacob
 
 markdown: kramdown
-
+input: GFM
 highlighter: rouge
 baseurl: /
 encoding: utf-8

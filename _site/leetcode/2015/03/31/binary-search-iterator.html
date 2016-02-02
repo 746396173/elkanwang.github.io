@@ -15,53 +15,79 @@
 
 			<div class="post">
 			<h3 id="initialization">Initialization</h3>
-
 <p>Initializing a binary search iterator, to create a stack to store all the most left nodes.</p>
 
 <h3 id="hasnext">hasNext</h3>
-
-<p>When asking if there is a next smallest number, we can just ask for if the stack that we built is empty.<br>
-If it&#39;s empty, then there is no more numbers.<br>
-If it isn&#39;t, then we can find the next smallest number</p>
+<p>When asking if there is a next smallest number, we can just ask for if the stack that we built is empty.<br />
+If it’s empty, then there is no more numbers.<br />
+If it isn’t, then we can find the next smallest number</p>
 
 <h3 id="next">next</h3>
-
-<p>When asking for the next smallest number, the next smallest number is the last thing inserted into the stack. So pop the stack, <code>node = self.stack.pop()</code> , to get the next smallest number.<br>
+<p>When asking for the next smallest number, the next smallest number is the last thing inserted into the stack. So pop the stack, <code class="highlighter-rouge">node = self.stack.pop()</code> , to get the next smallest number.<br />
 But also, we take a subtree rooted at the right child of the node. And keep all the left most nodes of the subtree into our stack. This way, we are able to scanning the binary tree and always output the next smallest number.</p>
 
-<hr>
+<hr />
+<p>The code:</p>
 
-<p>The code:  </p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29</pre></td><td class="code"><pre><span class="c"># Definition for a  binary tree node</span>
+<span class="c"># class TreeNode:</span>
+<span class="c">#     def __init__(self, x):</span>
+<span class="c">#         self.val = x</span>
+<span class="c">#         self.left = None</span>
+<span class="c">#         self.right = None</span>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="lineno"> 1</span> <span class="c"># Definition for a  binary tree node</span>
-<span class="lineno"> 2</span> <span class="c"># class TreeNode:</span>
-<span class="lineno"> 3</span> <span class="c">#     def __init__(self, x):</span>
-<span class="lineno"> 4</span> <span class="c">#         self.val = x</span>
-<span class="lineno"> 5</span> <span class="c">#         self.left = None</span>
-<span class="lineno"> 6</span> <span class="c">#         self.right = None</span>
-<span class="lineno"> 7</span> 
-<span class="lineno"> 8</span> <span class="k">class</span> <span class="nc">BSTIterator</span><span class="p">:</span>
-<span class="lineno"> 9</span>     <span class="c"># @param root, a binary search tree&#39;s root node</span>
-<span class="lineno">10</span>     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">):</span>
-<span class="lineno">11</span>         <span class="bp">self</span><span class="o">.</span><span class="n">stack</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="lineno">12</span>         <span class="k">while</span> <span class="n">root</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
-<span class="lineno">13</span>             <span class="bp">self</span><span class="o">.</span><span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
-<span class="lineno">14</span>             <span class="n">root</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">left</span>
-<span class="lineno">15</span> 
-<span class="lineno">16</span> 
-<span class="lineno">17</span>     <span class="c"># @return a boolean, whether we have a next smallest number</span>
-<span class="lineno">18</span>     <span class="k">def</span> <span class="nf">hasNext</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="lineno">19</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">stack</span>
-<span class="lineno">20</span> 
-<span class="lineno">21</span> 
-<span class="lineno">22</span>     <span class="c"># @return an integer, the next smallest number</span>
-<span class="lineno">23</span>     <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="lineno">24</span>         <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-<span class="lineno">25</span>         <span class="n">x</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">right</span>
-<span class="lineno">26</span>         <span class="k">while</span> <span class="n">x</span><span class="p">:</span>
-<span class="lineno">27</span>             <span class="bp">self</span><span class="o">.</span><span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="lineno">28</span>             <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">left</span>
-<span class="lineno">29</span>         <span class="k">return</span> <span class="n">node</span><span class="o">.</span><span class="n">val</span></code></pre></figure>
+<span class="k">class</span> <span class="nc">BSTIterator</span><span class="p">:</span>
+    <span class="c"># @param root, a binary search tree's root node</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stack</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">while</span> <span class="n">root</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+            <span class="n">root</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">left</span>
+
+
+    <span class="c"># @return a boolean, whether we have a next smallest number</span>
+    <span class="k">def</span> <span class="nf">hasNext</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">stack</span>
+
+
+    <span class="c"># @return an integer, the next smallest number</span>
+    <span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stack</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">right</span>
+        <span class="k">while</span> <span class="n">x</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">stack</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">left</span>
+        <span class="k">return</span> <span class="n">node</span><span class="o">.</span><span class="n">val</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
 
 
 			</div>

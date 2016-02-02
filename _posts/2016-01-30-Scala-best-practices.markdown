@@ -9,12 +9,11 @@ comments: true
 
 在学习的过程中发现了对许多的概念都非常不清楚，所以在这里先做一个Todo list，回来要把所有没清楚的搞清楚。
 
-
-- [ ] Variance
-- [ ] Monad
-- [ ] Type alias
-- [ ] Type
-- [ ] Implicits
+- Variance
+- Monad
+- Type alias
+- Type
+- Implicits
 
 -----
 

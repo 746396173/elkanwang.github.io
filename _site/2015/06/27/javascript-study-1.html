@@ -14,59 +14,64 @@
 			<h2 class="title">Javascript Study - 1</h2>
 
 			<div class="post">
-			<p>Inspired by one of the blog posts that I&#39;ve read recently, I&#39;ve decided probably I should read a book to gain a much deeper understanding of javascript so that I can write better code. The auther recommended JavaScript: the Definitive Guide.</p>
+			<p>Inspired by one of the blog posts that I’ve read recently, I’ve decided probably I should read a book to gain a much deeper understanding of javascript so that I can write better code. The auther recommended JavaScript: the Definitive Guide.</p>
 
 <p>This is the part 1 of the study notes and it will cover the core JavaScript part of the book.</p>
 
-<p>#Lexical Structure</p>
+<h1 id="lexical-structure">Lexical Structure</h1>
 
 <p>This part covers the lexical structure of JavaScript, i.e. the language itself. Some important things to note:</p>
 
 <ul>
-<li>JS is case sentive, but HTML is not</li>
+  <li>JS is case sentive, but HTML is not</li>
 </ul>
 
-<p>#Types, Values, and Variables</p>
+<h1 id="types-values-and-variables">Types, Values, and Variables</h1>
 
 <ul>
-<li>primitive types: numbers, strings, boolean, null, undefined</li>
-<li>object types</li>
+  <li>primitive types: numbers, strings, boolean, null, undefined</li>
+  <li>object types</li>
 </ul>
 
 <p>object is an unordered collection of named values.
 Special objects: Arrays, functions
-Classes: Arrays, functions, Date&#39;s, RegExp and Error</p>
+Classes: Arrays, functions, Date’s, RegExp and Error</p>
 
 <p>Mutable types: arrays, functions, objects
 Immutable types: numbers, strings, null, undefined, boolean</p>
 
 <p>Lexical scoping: variables declared outside of a function are global variables and are visible everywhere</p>
 
-<p>##Numbers</p>
+<h2 id="numbers">Numbers</h2>
 
-<p>The syntax for floating is <code>[digits][.digits][(E|e)[(+|-)]digits]</code>  </p>
+<p>The syntax for floating is <code class="highlighter-rouge">[digits][.digits][(E|e)[(+|-)]digits]</code></p>
 
-<p>There&#39;s no distinction between integers and floating point values. In JS, all numbers are represented as floating-point values (64bit). However, certain operations (e.g. array indexing and bitwise operations) are performed with 32-bit integers.</p>
+<p>There’s no distinction between integers and floating point values. In JS, all numbers are represented as floating-point values (64bit). However, certain operations (e.g. array indexing and bitwise operations) are performed with 32-bit integers.</p>
 
 <p>Besides the arithmetic operators like +, -, *, \/, and %, JavaScript supports more complex mathematical operations through a set of functions and constants defined as properties of the Math object. The example functions provided are: pow, round, ceil, floor, abs, max, min, random, PI, E, sqrt, pow, sin, log, exp. <a href="https://docs.python.org/3/library/math.html">full list</a></p>
 
-<p>Arithmetic in JS doesn&#39;t raise errors in case of <strong>overflow, underflow, or division by zero</strong>. Instead, it produces <em>Infinity</em> or <em>-Infinity</em> for overfulow and underflow. When the underflow happens closer to zero than the smallest representable number, JS returns <em>0</em> or <em>negative 0</em>. Division devided 0 returns <em>Inifinity</em> or <em>-Inifinity</em> or special case <em>NaN</em> when 0 is divided by 0. <em>NaN</em> also raises when infinity is divided by infinity, sqrt a negative number or use arithmetic operators with non-numeric operands. </p>
+<p>Arithmetic in JS doesn’t raise errors in case of <strong>overflow, underflow, or division by zero</strong>. Instead, it produces <em>Infinity</em> or <em>-Infinity</em> for overfulow and underflow. When the underflow happens closer to zero than the smallest representable number, JS returns <em>0</em> or <em>negative 0</em>. Division devided 0 returns <em>Inifinity</em> or <em>-Inifinity</em> or special case <em>NaN</em> when 0 is divided by 0. <em>NaN</em> also raises when infinity is divided by infinity, sqrt a negative number or use arithmetic operators with non-numeric operands.</p>
 
-<p>The <em>NaN</em> has an unusual feature. It doesn&#39;t compare equal to any other value, including itself. When trying to determine if the variable is not-a-number, you should do <em>x != x</em> or <em>isNaN()</em>. There&#39;s a similar function <em>isFinite()</em> to determine if the number is finite. There&#39;s some interesting behavior for zeros.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var zero = 0;
+<p>The <em>NaN</em> has an unusual feature. It doesn’t compare equal to any other value, including itself. When trying to determine if the variable is not-a-number, you should do <em>x != x</em> or <em>isNaN()</em>. There’s a similar function <em>isFinite()</em> to determine if the number is finite. There’s some interesting behavior for zeros.</p>
+
+<p><code class="highlighter-rouge">
+var zero = 0;
 var negz = -0;
 zero === negz; // =&gt; True
 1/zero === 1/negz; // =&gt; False, Inifinity != -Infinity
-</code></pre></div>
+</code></p>
+
 <p>p.s. because of floating-point precision issue, try to avoid calculations in decimals. Use integers instead.</p>
 
-<p>Dates and Times are also supported by JS. Here&#39;re some exmples</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var then = new Date(2010, 0, 1);
+<p>Dates and Times are also supported by JS. Here’re some exmples</p>
+
+<p>```
+var then = new Date(2010, 0, 1);
 var later = new Date(2010, 0, 1, 17, 10, 30);
 var now = new Date();
-var elapsed = now - then;
+var elapsed = now - then;</p>
 
-later.getFullYear();
+<p>later.getFullYear();
 later.getMonth();
 later.getDay();
 later.getHours();
@@ -76,73 +81,84 @@ later.toUTCString();
 later.toLocaleDateString();
 later.toLocaleTimeString();
 later.toISOString();
-</code></pre></div>
-<p>##Text</p>
+```</p>
 
-<p>A string is an imutable ordered sequence of 16-bit values, each of which typically represents a Unicode char - strings are JS&#39;s type for representing text. </p>
+<h2 id="text">Text</h2>
 
-<p>ECMAScript 5 allows multi-line string literal. </p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">&quot;two\nlines&quot;
-&quot;one\
+<p>A string is an imutable ordered sequence of 16-bit values, each of which typically represents a Unicode char - strings are JS’s type for representing text.</p>
+
+<p>ECMAScript 5 allows multi-line string literal.</p>
+
+<p><code class="highlighter-rouge">
+"two\nlines"
+"one\
 long\
-line&quot;
-</code></pre></div>
-<p>JS supports built-in concatenation of strings. <code>mag = &quot;Hello&quot; + &quot; &quot; + &quot;World&quot;</code></p>
+line"
+</code></p>
+
+<p>JS supports built-in concatenation of strings. <code class="highlighter-rouge">mag = "Hello" + " " + "World"</code></p>
 
 <p>Other functions are:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var s = &quot;Hello, world!&quot;
+
+<p>```
+var s = “Hello, world!”
 s.length;
 s.charAt(0);
 s.charAt(s.length-1);
 s.substring(1,4);
 s.slice(1,4);
 s.slice(-3);
-s.indexOf(&quot;l&quot;);
-s.indexOf(&quot;l&quot;, 3);
-s.lastIndexOf(&quot;l&quot;);
-s.split(&quot;, &quot;);
-s.replace(&quot;h&quot;, &quot;H&quot;);
-s.toUpperCase();
+s.indexOf(“l”);
+s.indexOf(“l”, 3);
+s.lastIndexOf(“l”);
+s.split(“, “);
+s.replace(“h”, “H”);
+s.toUpperCase();</p>
 
-// because strings are immutable, they return a new string
-</code></pre></div>
+<p>// because strings are immutable, they return a new string</p>
+
+<p>```</p>
+
 <p>Pattern matching: JS defines a <em>RegExp()</em> constructor for creating objects that represent textual patterns. Like Dates, they are simply a specialized kind of object, with a useful API.
 Example:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">var text = &quot;testing: 1, 2, 3&quot;;
+
+<p><code class="highlighter-rouge">
+var text = "testing: 1, 2, 3";
 var pattern = /\d+/g;
 pattern.test(text);
 text.search(pattern);
 text.match(pattern);
-text.replace(pattern, &quot;#&quot;);
+text.replace(pattern, "#");
 text.split(/\D+/);
-</code></pre></div>
-<p>##Boolean Values</p>
+</code></p>
 
-<p>Falsy values: undefined, null, 0, -0, NaN, &quot;&quot;</p>
+<h2 id="boolean-values">Boolean Values</h2>
 
-<p>##The Global Object</p>
+<p>Falsy values: undefined, null, 0, -0, NaN, “”</p>
 
-<p>##Wrapper Objects
-The temporary objects created when you access a property of a string, number, or boolean are known as wrapper objects. You just need to know that string, number, and boolean values differ from objects in that their properties are read-only and that you can&#39;t define new properties on them. Wrapper objects can be created explicitly by invoking String(), Number(), or Boolean() constructors. 
-<code>
-var s = &quot;test&quot;;
+<h2 id="the-global-object">The Global Object</h2>
+
+<h2 id="wrapper-objects">Wrapper Objects</h2>
+<p>The temporary objects created when you access a property of a string, number, or boolean are known as wrapper objects. You just need to know that string, number, and boolean values differ from objects in that their properties are read-only and that you can’t define new properties on them. Wrapper objects can be created explicitly by invoking String(), Number(), or Boolean() constructors. 
+<code class="highlighter-rouge">
+var s = "test";
 var S = new String(s);
 s == S;  // =&gt; True
 s === S; // =&gt; False
 </code></p>
 
-<p>##Immutable Primitive Values and Mutable Object References</p>
+<h2 id="immutable-primitive-values-and-mutable-object-references">Immutable Primitive Values and Mutable Object References</h2>
 
 <p>There is fundamental difference in JS between primitive values (undefined, booleans, numbers and strings) and objects (arrays and functions).</p>
 
 <p>two primitive values are equal iff their values are equal.
 two objects are equal if they are referencing to the same object.</p>
 
-<p>##Type Conversions</p>
+<h2 id="type-conversions">Type Conversions</h2>
 
-<p>##Variable Declaration</p>
+<h2 id="variable-declaration">Variable Declaration</h2>
 
-<p>##Variable Scope</p>
+<h2 id="variable-scope">Variable Scope</h2>
 
 <p>block scope v.s. function scope: variables are visible within the function in which they are defined and within any functions that are nested within that function.</p>
 
@@ -151,8 +167,9 @@ two objects are equal if they are referencing to the same object.</p>
 <p>For block scope: declare variables near their first use
 For function scope: declare variables at the beginnning</p>
 
-<p>Scope Chain: JavaScript is a <em>lexically scoped</em> language: the scope of a variable can be thought of as the set of source code lines for which the variable is defined. Every chunk of JS code (global code or functions) has a scope chain associated with it. This scope chian is a list or chain of objects that defines the variables that are &quot;in scope&quot; for that code.
+<p>Scope Chain: JavaScript is a <em>lexically scoped</em> language: the scope of a variable can be thought of as the set of source code lines for which the variable is defined. Every chunk of JS code (global code or functions) has a scope chain associated with it. This scope chian is a list or chain of objects that defines the variables that are “in scope” for that code.
 It is important to understand how this chain of objects is created. When a function is defined, it stores the scope chain then in effect. When that function is invoked, it creates a new object to store its local variables, and adds that new object to the stored scope chain to create a new, longer, chain that represents the scope for that function invocation. This becomes more interesting for nested functions because each time the outer function is called, the inner function is defined again. Since the scope chain dffers on each invocation of the outer function, the inner function will be subtly different each time it is defined - the scope of the inner function wil be identical on each invocation of the outer function, but the scope chain associated with that code will be different. The notion of a scope chain is helpful for understanding the <strong>with</strong> statement and <strong>closures</strong>.</p>
+
 
 
 			</div>

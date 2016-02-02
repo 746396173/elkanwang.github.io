@@ -16,40 +16,40 @@
 			<div class="post">
 			<h1 id="objects">Objects</h1>
 
-<p>In addition to its name and value, each property has associated values that we&#39;ll call property attributes:</p>
+<p>In addition to its name and value, each property has associated values that we’ll call property attributes:</p>
 
 <ul>
-<li>The <em>writable</em> attribute specifies whether the value of the property can be set.</li>
-<li>The <em>enumerable</em> attribute specifies whether the property name is returned by a for/in loop.</li>
-<li>The <em>configurable</em> attribute specifies whether the property can be deleted and whether its attributes can be altered.</li>
+  <li>The <em>writable</em> attribute specifies whether the value of the property can be set.</li>
+  <li>The <em>enumerable</em> attribute specifies whether the property name is returned by a for/in loop.</li>
+  <li>The <em>configurable</em> attribute specifies whether the property can be deleted and whether its attributes can be altered.</li>
 </ul>
 
 <p>In addition to its properties, every object has 3 associated <em>object attributes</em>:</p>
 
 <ul>
-<li><em>prototype</em> : a reference to another object from which properties are inherited.</li>
-<li><em>class</em> : a string that categorizes the type of an object.</li>
-<li><em>extensible</em> : flag specifies whether new properties may be added to the object.</li>
+  <li><em>prototype</em> : a reference to another object from which properties are inherited.</li>
+  <li><em>class</em> : a string that categorizes the type of an object.</li>
+  <li><em>extensible</em> : flag specifies whether new properties may be added to the object.</li>
 </ul>
 
 <p>There are 3 categories of JavaScript objects and 2 types of properties:</p>
 
 <ul>
-<li><em>native object</em>: an object or class of objects defined by the ECMAScript specification. e.g. Arrays, functions, dates, and Regex.</li>
-<li><em>host object</em>: an object defined by the host environmnet (such as web browser) within which the JavaScript interpreter is embedded. Host objects may also be native objects, as when the host environment defines methods that are normal JavaScript Function objects.</li>
-<li><em>user-defined</em> : any object created by the execution of JavaScript code.</li>
-<li><em>own property</em> : property defined directly on an object.</li>
-<li><em>inherited property</em> : property defined by an object&#39;s prototype object.</li>
+  <li><em>native object</em>: an object or class of objects defined by the ECMAScript specification. e.g. Arrays, functions, dates, and Regex.</li>
+  <li><em>host object</em>: an object defined by the host environmnet (such as web browser) within which the JavaScript interpreter is embedded. Host objects may also be native objects, as when the host environment defines methods that are normal JavaScript Function objects.</li>
+  <li><em>user-defined</em> : any object created by the execution of JavaScript code.</li>
+  <li><em>own property</em> : property defined directly on an object.</li>
+  <li><em>inherited property</em> : property defined by an object’s prototype object.</li>
 </ul>
 
 <h2 id="creating-objects">Creating Objects</h2>
 
-<hr>
+<hr />
 
 <h3 id="object-literals">Object Literals</h3>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">empty</span> <span class="o">=</span> <span class="p">{};</span>
-<span class="kd">var</span> <span class="nx">point</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">x</span><span class="o">:</span><span class="mi">0</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span><span class="mi">0</span> <span class="p">};</span></code></pre></figure>
+<span class="kd">var</span> <span class="nx">point</span> <span class="o">=</span> <span class="p">{</span> <span class="na">x</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span><span class="mi">0</span> <span class="p">};</span></code></pre></figure>
 
 <p>A single object literal can create many new objects.</p>
 
@@ -58,15 +58,15 @@
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span>
 <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span>
 <span class="kd">var</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
-<span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s2">&quot;js&quot;</span><span class="p">);</span></code></pre></figure>
+<span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">RegExp</span><span class="p">(</span><span class="s2">"js"</span><span class="p">);</span></code></pre></figure>
 
 <h3 id="prototypes">Prototypes</h3>
 
 <p>property chain</p>
 
-<h3 id="object-create">Object.create()</h3>
+<h3 id="objectcreate">Object.create()</h3>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">o1</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span><span class="nx">x</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span> <span class="nx">y</span><span class="o">:</span><span class="mi">2</span><span class="p">});</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">o1</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">({</span><span class="na">x</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span><span class="mi">2</span><span class="p">});</span>
 <span class="kd">var</span> <span class="nx">o2</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">o3</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span></code></pre></figure>
 
@@ -76,34 +76,33 @@
 
 <h2 id="testing-properties">Testing Properties</h2>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="lineno">1</span> <span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">x</span><span class="o">:</span><span class="mi">1</span> <span class="p">};</span>
-<span class="lineno">2</span> <span class="s2">&quot;x&quot;</span> <span class="k">in</span> <span class="nx">o</span><span class="p">;</span>
-<span class="lineno">3</span> <span class="nx">o</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">);</span>
-<span class="lineno">4</span> <span class="nx">o</span><span class="p">.</span><span class="nx">propertyIsEnumerable</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">);</span>
-<span class="lineno">5</span> <span class="nx">o</span><span class="p">.</span><span class="nx">x</span> <span class="o">!==</span> <span class="kc">undefined</span><span class="p">;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span> <span class="na">x</span><span class="p">:</span><span class="mi">1</span> <span class="p">};</span>
+<span class="s2">"x"</span> <span class="k">in</span> <span class="nx">o</span><span class="p">;</span>
+<span class="nx">o</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="s2">"x"</span><span class="p">);</span>
+<span class="nx">o</span><span class="p">.</span><span class="nx">propertyIsEnumerable</span><span class="p">(</span><span class="s2">"x"</span><span class="p">);</span>
+<span class="nx">o</span><span class="p">.</span><span class="nx">x</span> <span class="o">!==</span> <span class="kc">undefined</span><span class="p">;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <h2 id="enumerating-properties">Enumerating Properties</h2>
-
-<hr>
-
-<h2 id="property-getters-and-setters">Property Getters and Setters</h2>
-
-<hr>
-
-<h2 id="property-attributes">Property Attributes</h2>
-
-<hr>
+<hr />
+<p>## Property Getters and Setters
+—–
+## Property Attributes
+—–</p>
 
 <h2 id="object-attributes">Object Attributes</h2>
-
-<hr>
+<hr />
 
 <h2 id="serializing-objects">Serializing Objects</h2>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">o</span><span class="p">);</span>
 <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span></code></pre></figure>
 
-<hr>
+<hr />
 
 <h2 id="arrays">Arrays</h2>
 
