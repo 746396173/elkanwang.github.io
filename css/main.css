@@ -14,7 +14,7 @@
   }
 }
 body {
-  font-family: "Noto", sans-serif;
+  font-family: "Noto CJK", sans-serif;
   color: black;
 }
 
@@ -337,7 +337,6 @@ to prevent collapsing during animation*/
 /*****************************************************************************/
 #post {
   padding: 0 3em;
-  font-family: "Helvetica Neue","Helvetica Neue Roman",Helvetica,arial,sans-serif;
   font-size: 18px;
   background-color: #f5bdbc;
   margin: 0 auto;
@@ -369,7 +368,6 @@ pre[class*="language-"] {
   color: black;
   background: none;
   text-shadow: 0 1px white;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   direction: ltr;
   text-align: left;
   white-space: pre;
